@@ -11,8 +11,6 @@ import imgHTCVive from './img/headsets/HTCVive.png';
 import imgOculusRift from './img/headsets/OculusRift.png';
 import imgRazorOSVR from './img/headsets/RazorOSVR.png';
 import imgValveIndex from './img/headsets/ValveIndex.png';
-import img19eEeuw from './img/geschiedenis/360deg_painting.png';
-import img1950 from './img/geschiedenis/sensorama.png';
 
 const App = () => {
     const [page, setPage] = useState("index");
@@ -72,29 +70,6 @@ const App = () => {
             img: imgValveIndex,
         }],
     ])
-	const geschiedenisInformatie: object[] = [
-		{
-			title: "19e Eeuw",
-			par1: "De oudste pogingen een omgeving na te bootsen waren in de 19e eeuw door schilders en andere kunstenaren, zij maakte 360 graden schilderijen of andere kunstwerken. Ze deden dit om de beschouwers te laten voelen alsof ze zelf in dat moment zaten.",
-			img: img19eEeuw,
-			imgAlt: "360 graden schilderij",
-		},
-		{
-			title: "1883",
-			par1: "In 1838 maakte de Engelse wetenschapper Charles Wheatstone de ontdekking dat wanneer beide ogen twee iets verschillende afbeeldingen te zien krijgen de hersenen deze samenvoegen tot een drie dimensionale afbeelding. Dit leidde tot de uitvinding van drie dimensionale stereoscopische weergave.",
-		},
-		{
-			title: "Jaren 1930",
-			par1: "Vele jaren later, in de jaren dertig van de 20e eeuw, was virtual reality een ware hype onder sciencefiction schrijvers. Zo voorspelde vele sciencefiction boeken een toekomst met levensechte computer gegenereerde omgevingen die alle zintuigen doen prikkelen.",
-		},
-		{
-			title: "Jaren 1950",
-			par1: "Douglas Engelbert, een elektrische ingenieur, kwam met het gewaagde idee om computers te gebruiken voor het voorzien van informatie. Dit was ongewoon gezien computers in deze tijd gezien werden als verheerlijkte rekenmachines. Desondanks hadden vele mensen behoefte aan een manier om data te visualiseren. Zijn werk voor het Augmentation Reseach Center Lab leidde, onder andere, tot de creatie van de computer muis, hypertext, computernetwerken en voorgangers van GUIs (graphical user interfaces).",
-			par2: "In de jaren vijftig werd ook de Sensorama ontworpen door uitvinder Morton Heilig, de Sensorama was een theater cabine met audio, geur generatoren en stereoscopische filmprojectoren. Dit alles om de gebruikers te laten voelen als of zij zelf in de film zaten.",
-			img: img1950,
-			imgAlt: "Sensorama",
-		},
-	];
 
     const toggleHeadsetsMenu = () => {
         setShowHeadsetDropDown(!showHeadsetDropDown);

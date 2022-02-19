@@ -44,12 +44,12 @@ const Informatie = ({ info }: any) => {
 
 	// convert alle informatie tot JSX elementen en voegt die toe aan de info array (return)
 	const displayInfo = () => {
-		console.log(rawInfo);
 		let info: JSX.Element[] = [];
 
+		let n = 0;
 		rawInfo.forEach((i: any) => {
 			info.push(
-				<div key={i.title} className="text-container">
+				<div key={i.title} id={`${n}`} className="text-container">
 					<h2>{i.title}</h2>
 					<div className="par-text">
 						<div>
@@ -70,12 +70,34 @@ const Informatie = ({ info }: any) => {
 					</div>
 				</div>
 			);
+			n++;
 		});
 		return info;
 	}
 
+	const displayAnchors = () => {
+		let anchors: JSX.Element[] = [];
+		let n = 0;
+		rawInfo.forEach((i: any) => {
+			anchors.push(
+				<a key={n} href={`#${n}`}>
+					{i.title}
+				</a>
+			)
+			n++;
+		});
+		return anchors;
+	}
+
 	return (
 		<>
+		 	<div id="anchor-display">
+				<h3>Secties</h3>
+				<div className="anchor-container">
+					{displayAnchors()}
+				</div>
+			 </div>
+
 			<h3 id="change-volgorde" onClick={changeOrder}>Volgorde ⟳</h3>
 			{displayInfo()}
 		</>
