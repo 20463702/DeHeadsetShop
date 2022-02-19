@@ -1,7 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Headset = ({ headset }: any) => {
+const Headset = ({ headsets }: any) => {
+    const headsetName = new URLSearchParams(window.location.search).get("headsetName");
+	const headset = headsets.get(headsetName)
 	//! PLACEHOLDER
 	let headsetInfo = new Array<JSX.Element>()
 	for (const key in headset) {
@@ -19,10 +21,6 @@ const Headset = ({ headset }: any) => {
 			//!
 		</div>
 	)
-}
-
-Headset.propTypes = {
-	headset: PropTypes.object,
 }
 
 export default Headset

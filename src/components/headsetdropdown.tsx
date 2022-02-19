@@ -5,15 +5,25 @@ import imgOculusRift from '../img/headsets/OculusRift.png';
 import imgRazorOSVR from '../img/headsets/RazorOSVR.png';
 import imgValveIndex from '../img/headsets/ValveIndex.png';
 
-const Headsetdropdown = ({ shown, setPage }: any) => {
+const Headsetdropdown = ({ shown }: any) => {
     if (shown) {
         return (
             <>
+            {/* Wordt hier gebruik gemaakt van <a>'s in plaats van <Links>'s zodat de pagina refreshed en de <Headset/> component 
+                de naam variabel uit de URL kan halen.*/}
             <div id="headsets-container">
-                <img onClick={() => {setPage("htcvive")}} src={imgHTCVive} alt="HTCVive" />                
-                <img onClick={() => {setPage("oculusrift")}} src={imgOculusRift} alt="OculusRift" />                
-                <img onClick={() => {setPage("razorosvr")}} src={imgRazorOSVR} alt="RazorOSVR" />                
-                <img onClick={() => {setPage("valveindex")}} src={imgValveIndex} alt="ValveIndex" />                
+                <a href="/headset?headsetName=htcvive">
+                    <img src={imgHTCVive} alt="HTCVive" />                
+                </a>
+                <a href="/headset?headsetName=oculusrift">
+                    <img src={imgOculusRift} alt="OculusRift" />                
+                </a>
+                <a href="/headset?headsetName=razorosvr">
+                    <img src={imgRazorOSVR} alt="RazorOSVR" />                
+                </a>
+                <a href="/headset?headsetName=valveindex">
+                    <img src={imgValveIndex} alt="ValveIndex" />                
+                </a>
             </div>
             <hr className="red"/>
             </>
@@ -25,7 +35,6 @@ const Headsetdropdown = ({ shown, setPage }: any) => {
 }
 
 Headsetdropdown.propTypes = {
-    setPage: PropTypes.func.isRequired,
     shown: PropTypes.bool.isRequired,
 }
 
