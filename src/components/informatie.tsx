@@ -37,12 +37,13 @@ const Informatie = ({ info }: any) => {
 	}
 	const rawInfo = getInfo();
 
+	// Flipt de volgorde.
 	const changeOrder = () => {
 		setVolgorde(!volgorde);
 		rawInfo.reverse();
 	}
 
-	// convert alle informatie tot JSX elementen en voegt die toe aan de info array (return)
+	// Convert alle informatie tot JSX elementen en voegt die toe aan de info array (return).
 	const displayInfo = () => {
 		let info: JSX.Element[] = [];
 
@@ -75,6 +76,7 @@ const Informatie = ({ info }: any) => {
 		return info;
 	}
 
+	// Maakt een anker voor iedere sectie v.d. informatie en returned deze ankers.
 	const displayAnchors = () => {
 		let anchors: JSX.Element[] = [];
 		let n = 0;

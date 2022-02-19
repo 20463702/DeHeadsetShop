@@ -4,6 +4,8 @@ import bronnenJSON from '../json/bronnen.json';
 
 const Bronnen = ({ showBronnen, setShowBronnen }: any) => {
 	const toggleBronnen = () => {setShowBronnen(!showBronnen)}
+
+	// Convert alle bronnen tot JSX elementen en voegt die toe aan de bronnen array (return).
 	const getBronnen = () => {
 		let bronnen: JSX.Element[] = new Array<JSX.Element>();
 		bronnenJSON.forEach((b: any) => {

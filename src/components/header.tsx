@@ -3,12 +3,16 @@ import PropTypes from 'prop-types';
 import { BrowserRouter, Link } from 'react-router-dom';
 
 const Header = ({ setPage, toggleHeadsetsMenu, showHeadsetsMenu }: any) => {
+	// Vat parameter "p" uit de URL.
 	const page = new URLSearchParams(window.location.search).get("p")
 	return (
 		<div>
 			<div id="title">
 				<h1>DeHeadsetShop</h1>
 				</div>
+				{/* Na ongeveer een uur debuggen ben ik tot de [allicht incorrecte] conclusie gekomen dat de knoppen een
+					interactie met state nodig hebben om hun className te updated, van daar dat er een eigenlijk ongebruikte
+					state funcite bij de onClick staat. */}
 				<div className="button-container">
 					<Link to="/">
 						<button className={page === null ? "button-selected" : ""} onClick={() => {setPage("index")}}>Index</button>

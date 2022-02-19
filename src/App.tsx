@@ -11,12 +11,16 @@ import imgHTCVive from './img/headsets/HTCVive.png';
 import imgOculusRift from './img/headsets/OculusRift.png';
 import imgRazorOSVR from './img/headsets/RazorOSVR.png';
 import imgValveIndex from './img/headsets/ValveIndex.png';
-import { BrowserRouter, Route, Routes, useParams } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 const App = () => {
+    // Functioneert als een updated: zie header.tsx voor meer informatie hierover.
     const [page, setPage] = useState("index");
+    // State over of de headset drop down menu wel of niet gelaten zien moet worden.
     const [showHeadsetDropDown, setShowHeadsetDropDown] = useState(false);
+    // State over of de bronnen gelaten zien moeten worden.
 	const [showBronnen, setShowBronnen] = useState(false);
+    // Informatie over de headsets (geen JSON [deels] zodat het leven met de plaatjes een stuk makkelijker is).
     const headsets = new Map<string, object>([
         ["htcvive", {
             naam: "HTCVive",
