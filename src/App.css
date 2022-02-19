@@ -1,0 +1,168 @@
+:root {
+    /* primaire kleur (primary color) */
+    --pc: rgba(255, 50, 50, 1);
+    /* secundaire kleur (secondary color) */
+    --sc: rgba(255, 255, 255, 1);
+    /* achtergrond kleur (background color) */
+    --bgc: rgba(30, 30, 30, 1);
+}
+/* Algemene CSS */
+html {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(50, 50, 50, 1);
+}
+body {
+    margin: 0;
+    color: var(--sc);
+    background-color: var(--bgc);
+    width: 1024px;
+}
+
+hr.red {
+    color: var(--pc);
+}
+
+/* Tekst en afbeelding gerelateerde CSS */
+.text-container {
+    margin: 2em;
+    margin-left: 5em;
+    margin-right: 5em;
+}
+
+.par-text div p {
+    width: 30em;
+    text-align: justify;
+}
+
+.text-container img {
+    max-height: 15em;
+    max-width: 25em;
+    border: 2px solid var(--sc);
+    border-radius: 1em;
+}
+
+.text-container h2 {
+    margin-left: 3em;
+}
+
+.par-text {
+    display: flex;
+}
+
+.par-text img {
+    margin-left: 2em;
+    width: 30em;
+}
+
+/* Header CSS */
+#header {
+    top: 0;
+    background-color: var(--bgc);
+}
+
+#title {
+    width: 100%;
+    margin-top: 0;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    background-image: linear-gradient(135deg, rgba(255, 20, 20, 1), rgba(255, 80, 80, 1));
+    text-align: center;
+}
+
+/* Knop gerelateerde CSS */
+.button-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.button-container button {
+    width: 13em;
+    margin: 1em;
+    padding: 0.5em;
+    border-radius: 1em;
+    background-color: var(--bgc);
+    color: var(--sc);
+}
+    .button-container button:hover {
+        color: var(--bgc);
+        background-color: var(--sc);
+        cursor: pointer;
+    }
+
+.button-selected {
+    cursor: pointer;
+    color: var(--bgc) !important;
+    background-color: var(--sc) !important;
+}
+    .button-selected:hover {
+        color: var(--sc) !important;
+        background-color: var(--bgc) !important;
+    }
+
+/* Headset drop-down menu gerelateerde CSS (HeadsetDropDown component) */
+#headsets-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+#headsets-container img {
+    width: 26em;
+    padding: 0.1em;
+    height: 7em;
+    margin: 2em;
+    border: 1px solid var(--sc);
+    border-radius: 1em;
+    background-color: var(--bgc);
+    cursor: pointer;
+}
+
+/* flex-box table (Vergelijking component) */
+#vergelijking-table {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 1em;
+    text-align: center;
+}
+
+#vergelijking-table div h3 {
+    margin: 0;
+    border: 1px solid var(--sc);
+    padding: 0.5em;
+}
+
+#vergelijking-table div img, #vergelijking-imgs img {
+    margin-bottom: 0.2em;
+    border: 2px solid var(--sc);
+    border-radius: 0.5em;
+    padding: 0;
+    width: 12em;
+    height: 4em;
+}
+
+.vergelijking-table-column * {
+    width: 10em;
+    cursor: pointer;
+}
+
+#vergelijking-table-headers {
+    text-align: right;
+    align-self: flex-end;
+}
+
+#vergelijking-imgs {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2em;
+    margin-bottom: 3em;
+}
+
+#vergelijking-imgs img {
+    flex-direction: column;
+    width: 12em;
+    cursor: pointer;
+}
