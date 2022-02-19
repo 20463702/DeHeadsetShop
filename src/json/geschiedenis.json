@@ -1,0 +1,120 @@
+[
+    {
+        "title": "19e Eeuw",
+        "par1": "De oudste pogingen een omgeving na te bootsen waren in de 19e eeuw door schilders en andere kunstenaren, zij maakte 360 graden schilderijen of andere kunstwerken. Ze deden dit om de beschouwers te laten voelen alsof ze zelf in dat moment zaten.",
+        "img": "360degreePainting",
+        "imgAlt": "360 graden schilderij"
+    },
+    {
+        "title": "1883",
+        "par1": "In 1838 maakte de Engelse wetenschapper Charles Wheatstone de ontdekking dat wanneer beide ogen twee iets verschillende afbeeldingen te zien krijgen de hersenen deze samenvoegen tot een drie dimensionale afbeelding. Dit leidde tot de uitvinding van drie dimensionale stereoscopische weergave."
+    },
+    {
+        "title": "Jaren 1930",
+        "par1": "Vele jaren later, in de jaren dertig van de 20e eeuw, was virtual reality een ware hype onder sciencefiction schrijvers. Zo voorspelde vele sciencefiction boeken een toekomst met levensechte computer gegenereerde omgevingen die alle zintuigen doen prikkelen."
+    },
+    {
+        "title": "Jaren 1950",
+        "par1": "Douglas Engelbert, een elektrische ingenieur, kwam met het gewaagde idee om computers te gebruiken voor het voorzien van informatie. Dit was ongewoon gezien computers in deze tijd gezien werden als verheerlijkte rekenmachines. Desondanks hadden vele mensen behoefte aan een manier om data te visualiseren. Zijn werk voor het Augmentation Reseach Center Lab leidde, onder andere, tot de creatie van de computer muis, hypertext, computernetwerken en voorgangers van GUIs (graphical user interfaces).",
+        "par2": "In de jaren vijftig werd ook de Sensorama ontworpen door uitvinder Morton Heilig, de Sensorama was een theater cabine met audio, geur generatoren en stereoscopische filmprojectoren. Dit alles om de gebruikers te laten voelen als of zij zelf in de film zaten.",
+        "img": "sensorama",
+        "imgAlt": "Sensorama"
+    },
+    {
+        "title": "Jaren 1960",
+        "par1": "In de jaren zestig (van de 20e eeuw) vond Morton Heilig de Telesphere Mask uit, de eerste HMD (Head Mounted Display). Deze eerste HMD bevatte geen beweging sensoren."
+    },
+    {
+        "title": "1961",
+        "par1": "In 1961 werd de eerste HMD mét beweging sensoren ontwikkeld door Philco, de Headsight werd deze HMD genoemd. De Headsight was niet bedoeld voor VR maar voor militaire applicaties om van een afstand gevaarlijke situaties te bekijken."
+    },
+    {
+        "title": "1965",
+        "par1": "Ivan Sutherland presenteerde zijn visie van de Ultimate Display. Het concept was een virtuele wereld die door een HMD gezien zou worden, deze wereld zou zo echt moeten lijken dat de gebruiker het verschil tussen deze virtuele wereld en de echte niet kan zien door onder andere de gebruiker interacties te laten hebben met objecten. Zijn scriptie wordt gezien als de blueprint voor VR."
+    },
+    {
+        "title": "1968", 
+        "par1": "Ivan Sutherland maakte samen met zijn student Bob Sproull de eerste augmented reality headhead mounted display, The Sword of Damocles. The sword of Damocles kon alleen primitieve 3D-wireframes visualiseren en is nooit meer dan een experiment geworden, dit was omdat deze HMD extreem zwaar was en daardoor niet makkelijk te gebruiken.",
+        "img": "swordOfDamocles",
+        "imgAlt": "The Sword of Damocles"
+    },
+    {
+        "title": "1975",
+        "par1": "Computerkunstenaar Myron W. Krueger ontwikkeld de VideoPlace, het eerste interactieve VR platform. Het gebruikte computergraphics, projectoren, videocamera's, videodisplays en positiedetectietechnologie. Verder maakte het geen gebruik van gedragen displays of sensoren. De gebruikers konden hun computergegenereerde silhouetten zien die hun eigen bewegingen en acties imiteerden - de bewegingen van de gebruikers werden vastgelegd op de camera en overgebracht op het silhouet. Ook konden gebruikers in verschillende kamers communiceren met de silhouetten van andere gebruikers, in dezelfde virtuele wereld. Dit stimuleerde het idee dat mensen binnen een virtuele wereld konden communiceren, zelfs als ze niet fysiek dichtbij waren.",
+        "img": "videoplace",
+        "imgAlt": "VideoPlace"
+    },
+    {
+        "title": "1977",
+        "par1": "MIT maakt Apsen Movie Map, met dit programma konden gebruikers virtueel door Apsen city in Colorado dwalen, zoals nu kan met Google Street View. Het was gemaakt met behulp van foto's vanuit een auto die door de stad reed. Hoewel het geen gebruik maakte van HMD's suggereerde het dat VR mensen in de toekomst naar andere plaatsen zou kunnen vervoeren."
+    },
+    {
+        "title": "1979",
+        "par1": "McDonnell-Douglas Coöperatie integreerde VR in zijn HMD, de VITAL-helm, voor militair gebruik. Een headtracker in de HMD volgde de oogbewegingen van de piloot om computer gegenereerde beelden te matchen."
+    },
+    {
+        "title": "1982",
+        "par1": "Sandin en Defanti maken de Sayre-gloves. Deze handschoenen hielden handbewegingen in de gaten met behulp van lichtstralers en fotocellen in de vingers van de handschoenen. Dit zou goed het begin van gebarenherkenning geweest kunnen zijn.",
+        "par2": "1982 was ook het jaar dat Furness een werkend model van een virtuele vluchtsimulator creëerde, voor het leger, genaamd de Visually Coupled Airborne Systems Simulator (VCASS)."
+    },
+    {
+        "title": "1985",
+        "par1": "Jaron Lanier en Thomas Zimmerman richten VPL Research Inc. op. Dit bedrijf staat bekend om het eerste bedrijf dat VR brillen en hangschoenen verkocht.",
+        "img": "VPLResearch"
+    },
+    {
+        "title": "1986",
+        "par1": "Scott Foster richtte Crystal River Engineering Inc. op na het ontvangen van een contract van NASA om het audio-element van het Virtual Environment Workstation Project (VIEW) te ontwikkelen - een VR-trainingssimulator voor astronauten. Door dit bedrijf werd real-time bi-neurale 3D-audioverwerking ontwikkeld. Mattel Inc. brengt de Power Glove uit, gebaseerd op VPL's DataGlove. De Power Glove was een controlleraccessoire voor het Nintendo Entertainment System, maar het kwam nooit van de grond omdat het moeilijk te gebruiken was.",
+        "img": "virtualEnvironmentWorkstation",
+        "imgAlt": "Virtual Environment Workstation Project NASA"
+    },
+    {
+        "title": "1997",
+        "par1": "Onderzoekers van Georgia Tech en Emory University gebruikten VR om oorlogsgebied scenario's te maken voor veteranen die blootstellingstherapie voor PTSS kregen. Dit stond bekend als Virtual Vietnam.",
+        "img": "vietnam",
+        "imgAlt": "Vietnam VR"
+    },
+    {
+        "title": "2007",
+        "par1": "Google introduceert street view.",
+        "img": "googleStreetview",
+        "imgAlt": "Streetview voorbeeld"
+    },
+    {
+        "title": "2010",
+        "par1": "Google introduceert een stereoscopische 3D-modus voor street view.",
+        "par2": "Ook creëerde Palmer Luckey, een 18-jarige ondernemer, het eerste prototype van de Oculus Rift-headset. Het had een gezichtsveld van 90 graden, dat nog nooit eerder was gezien, en vertrouwde op de verwerkingskracht van een computer om de beelden te leveren. Deze nieuwe ontwikkeling heeft de interesse in VR gestimuleerd en opgefrist."
+    },
+    {
+        "title": "2012",
+        "par1": "Luckey's Kickstarter campagne voor de Oculus Rift brengt 2,4 miljard dollar (USD) up.",
+        "img": "oculusKickstarter",
+        "imgAlt": "Oculus Rift Kickstarter"
+    },
+    {
+        "title": "2014",
+        "par1": "Facebook kocht het bedrijf Oculus VR voor 2 miljard dollar. Dit was een bepalend moment in de geschiedenis van VR omdat VR hierna snel in een stroomversnelling kwam.",
+        "par2": "Google heeft the Cardboard uitgebracht - een goedkope en doe-het-zelf stereoscopische viewer voor smartphones. Samsung kondigde de Samsung Gear VR aan, een headset dat een Samsung Galaxy smartphone gebruikt als display."
+    },
+    {
+        "title": "2016",
+        "par1": "Haptische interfaces werden onder ontwikkeld. Haptische interfaces zijn systemen waarmee mensen met een computer kunnen communiceren met behulp van hun aanraking en bewegingen - zoals de Gloveone-handschoenen die werden ontwikkeld."
+    },
+    {
+        "title": "2018",
+        "par1": "Virtual reality is aanzienlijk vooruitgegaan en wordt nu op verschillende manieren gebruikt, van het bieden van meeslepende game-ervaringen, tot het helpen behandelen van psychische stoornissen, tot het aanleren van nieuwe vaardigheden en zelfs het meenemen van terminaal zieke mensen op virtuele reizen. VR heeft veel toepassingen en met de opkomst van smartphonetechnologie zal VR nog toegankelijker worden.",
+        "par2": "Op Facebook F8 demonstreerde Oculus een nieuw prototype van de headset, de Half Dome. Dit is een varifocale headset met een gezichtsveld van 140 graden.",
+        "img": "halfDome",
+        "imgAlt": "Oculus Half Dome Project"
+    },
+    {
+        "title": "2019",
+        "par1": "De verschuiving van bekabelde naar draadloze VR-headsets betekende een verschuiving binnen het meeslepende ecosysteem, omdat draadloze headsets veel gemakkelijker te gebruiken zijn voor de gemiddelde consument."
+    },
+    {
+        "title": "2020",
+        "par1": "De Oculus Quest 2 werd onthuld op 16 september 2020 tijdens het Facebook Connect 7-evenement. De Quest 2 ontving overwegend positieve recensies als een incrementele update van de Quest.",
+        "img": "oculusQuest2",
+        "imgAlt": "Oculus Quest 2"
+    }
+]

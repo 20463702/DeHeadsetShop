@@ -38,7 +38,7 @@ hr.red {
 
 .text-container img {
     max-height: 15em;
-    max-width: 25em;
+    max-width: 20em;
     border: 2px solid var(--sc);
     border-radius: 1em;
 }
@@ -78,7 +78,7 @@ hr.red {
     justify-content: space-around;
 }
 
-.button-container button {
+button {
     width: 13em;
     margin: 1em;
     padding: 0.5em;
@@ -86,7 +86,7 @@ hr.red {
     background-color: var(--bgc);
     color: var(--sc);
 }
-    .button-container button:hover {
+    button:hover {
         color: var(--bgc);
         background-color: var(--sc);
         cursor: pointer;
@@ -164,5 +164,11 @@ hr.red {
 #vergelijking-imgs img {
     flex-direction: column;
     width: 12em;
+    cursor: pointer;
+}
+
+/* Misc CSS */
+#change-volgorde {
+    margin-left: 10em;
     cursor: pointer;
 }
