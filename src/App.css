@@ -20,10 +20,6 @@ body {
     width: 1024px;
 }
 
-hr.red {
-    color: var(--pc);
-}
-
 /* Tekst en afbeelding gerelateerde CSS */
 .text-container {
     margin: 2em;
@@ -201,4 +197,8 @@ a {
 #change-volgorde {
     margin-left: 10em;
     cursor: pointer;
+}
+
+hr.red {
+    color: var(--pc);
 }
