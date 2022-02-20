@@ -3,7 +3,7 @@ import PropTypeos from 'prop-types';
 import geschiedenis from '../json/geschiedenis.json';
 import applicaties from '../json/applicaties.json';
 
-const Informatie = ({ info, volgorde, setVolgorde }: any) => {
+const Informatie = ({ info, order, setOrder }: any) => {
 	// const [volgorde, setVolgorde] = useState(true);
 	const images = new Map<string, string>([
 		["360degreePainting", require("../img/geschiedenis/360deg_painting.png")],
@@ -21,26 +21,26 @@ const Informatie = ({ info, volgorde, setVolgorde }: any) => {
 		["gezondheidszorg", require("../img/applicaties/gezondheidszorg.png")],
 		["onderwijs", require("../img/applicaties/vr-in-education.png")],
 		["vastgoed", require("../img/applicaties/vastgoed.png")],
-	])
+	]);
 
 	// Vat alle informatie en pleurt het in (const) rawInfo
 	const getInfo = (): object[] => {
-		let informatie = new Array<object>();
+		let information = new Array<object>();
 		if (info === "geschiedenis") {
-			informatie = geschiedenis;
+			information = geschiedenis;
 		} else if (info === "applicaties") {
-			informatie = applicaties;
+			information = applicaties;
 		} else {
-			console.error("Invalide informatie naam");
+			console.error("Invalid request");
 		}
-		return informatie
+		return information
 	}
 	const rawInfo = getInfo();
 
 	// Flipt de volgorde.
 	const changeOrder = (): void => {
 		// Benodigde interactie met state om de DOM te updated.
-		setVolgorde(!volgorde);
+		setOrder(!order);
 		rawInfo.reverse();
 	}
 
@@ -109,8 +109,8 @@ const Informatie = ({ info, volgorde, setVolgorde }: any) => {
 
 Informatie.propTypes = {
 	info: PropTypeos.string.isRequired,
-	volgorde: PropTypeos.any.isRequired,
-	setVolgorde: PropTypeos.func.isRequired,
+	order: PropTypeos.any.isRequired,
+	setOrder: PropTypeos.func.isRequired,
 }
 
 export default Informatie

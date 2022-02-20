@@ -8,9 +8,7 @@ const Header = ({ page, setPage, toggleHeadsetsMenu, showHeadsetsMenu }: any) =>
 			<div id="title">
 				<h1>DeHeadsetShop</h1>
 				</div>
-				{/* Na ongeveer een uur debuggen ben ik tot de [allicht incorrecte] conclusie gekomen dat de knoppen een
-					interactie met state nodig hebben om hun className te updated, van daar dat er een eigenlijk ongebruikte
-					state funcite bij de onClick staat. */}
+				{/* De onClick functie is er voor de benodigde interactie met State */}
 				<div className="horizontal-flex-container">
 					<Link to="/">
 						<button

@@ -11,7 +11,7 @@ import imgHTCVive from './img/headsets/HTCVive.png';
 import imgOculusRift from './img/headsets/OculusRift.png';
 import imgRazorOSVR from './img/headsets/RazorOSVR.png';
 import imgValveIndex from './img/headsets/ValveIndex.png';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Footer from './components/footer';
 
 const App = () => {
@@ -22,7 +22,7 @@ const App = () => {
     // State over of de bronnen gelaten zien moeten worden.
 	const [showBronnen, setShowBronnen] = useState<boolean>(false);
     // Volgorde van informatie: true is standaard (<).
-	const [volgorde, setVolgorde] = useState<boolean>(true);
+	const [order, setOrder] = useState<boolean>(true);
     // Informatie over de headsets (geen JSON [deels] zodat het leven met de plaatjes een stuk makkelijker is).
     const headsets = new Map<string, object>([
         ["htcvive", {
@@ -88,7 +88,7 @@ const App = () => {
         setPage(page);
         setShowHeadsetDropDown(false);
         setShowBronnen(false);
-        setVolgorde(false);
+        setOrder(false);
         document.title =
             page === null ? "DeHeadsetShop" :
             `${page} - DeHeadsetShop`;
@@ -119,8 +119,8 @@ const App = () => {
                         path="/geschiedenis"
                         element=
                             {<Informatie
-                                volgorde={volgorde}
-                                setVolgorde={setVolgorde}
+                                order={order}
+                                setOrder={setOrder}
                                 info="geschiedenis"
                             />}
                     />
@@ -128,8 +128,8 @@ const App = () => {
                         path="/applicaties"
                         element=
                             {<Informatie
-                                volgorde={volgorde}
-                                setVolgorde={setVolgorde}
+                                order={order}
+                                setOrder={setOrder}
                                 info="applicaties"
                             />}
                     />
