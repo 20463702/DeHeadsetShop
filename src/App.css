@@ -6,18 +6,21 @@
     /* achtergrond kleur (background color) */
     --bgc: rgba(30, 30, 30, 1);
 }
+
 /* Algemene CSS */
 html {
     margin: 0;
     display: flex;
     justify-content: center;
+    scroll-behavior: smooth;
     background-color: rgba(50, 50, 50, 1);
 }
+
 body {
     margin: 0;
+    width: 1024px;
     color: var(--sc);
     background-color: var(--bgc);
-    width: 1024px;
 }
 
 /* Tekst en afbeelding gerelateerde CSS */
@@ -33,10 +36,10 @@ body {
 }
 
 .text-container img {
-    max-height: 15em;
-    max-width: 20em;
     border: 2px solid var(--sc);
     border-radius: 1em;
+    max-height: 15em;
+    max-width: 20em;
 }
 
 .text-container h2 {
@@ -76,10 +79,10 @@ body {
 
 button {
     cursor: pointer;
-    width: 13em;
     margin: 1em;
     padding: 0.5em;
     border-radius: 1em;
+    width: 13em;
     background-color: var(--bgc);
     color: var(--sc);
 }
@@ -106,22 +109,22 @@ button {
 }
 
 #headsets-container img {
-    width: 26em;
-    padding: 0.1em;
-    height: 7em;
     margin: 2em;
     border: 1px solid var(--sc);
     border-radius: 1em;
+    padding: 0.1em;
+    height: 7em;
+    width: 26em;
     background-color: var(--bgc);
     cursor: pointer;
 }
 
 /* flex-box table (Vergelijking component) */
 #vergelijking-table {
+    margin-top: 1em;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin-top: 1em;
     text-align: center;
 }
 
@@ -136,31 +139,31 @@ button {
     border: 2px solid var(--sc);
     border-radius: 0.5em;
     padding: 0;
-    width: 12em;
     height: 4em;
+    width: 12em;
 }
 
 .vergelijking-table-column * {
-    width: 10em;
     cursor: pointer;
+    width: 10em;
 }
 
 #vergelijking-table-headers {
-    text-align: right;
     align-self: flex-end;
+    text-align: right;
 }
 
 #vergelijking-imgs {
-    display: flex;
-    justify-content: space-around;
     margin-top: 2em;
     margin-bottom: 3em;
+    display: flex;
+    justify-content: space-around;
 }
 
 #vergelijking-imgs img {
-    flex-direction: column;
-    width: 12em;
     cursor: pointer;
+    width: 12em;
+    flex-direction: column;
 }
 
 /* Anchor gerelateerde CSS */
@@ -169,13 +172,12 @@ a {
 }
 
 #anchor-display {
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
     margin: 10em;
     margin-top: 2em;
     margin-bottom: 2em;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
 }
 
 #anchor-display h3 {
@@ -195,8 +197,8 @@ a {
 
 /* Misc CSS */
 #change-volgorde {
-    margin-left: 10em;
     cursor: pointer;
+    margin-left: 10em;
 }
 
 hr.red {

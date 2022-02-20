@@ -33,7 +33,7 @@ const Header = ({ page, setPage, toggleHeadsetsMenu, showHeadsetsMenu }: any) =>
 }
 
 Header.propTypes = {
-	page: PropTypes.any.isRequired,
+	page: PropTypes.any,
 	setPage: PropTypes.func.isRequired,
 	toggleHeadsetsMenu: PropTypes.func.isRequired,
 	showHeadsetsMenu: PropTypes.bool.isRequired,
