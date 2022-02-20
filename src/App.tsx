@@ -16,13 +16,13 @@ import Footer from './components/footer';
 
 const App = () => {
     // Functioneert als een updated: zie header.tsx voor meer informatie hierover.
-    const [page, setPage]: any = useState(null);
+    const [page, setPage]: any = useState<string|null>(null);
     // State over of de headset drop down menu wel of niet gelaten zien moet worden.
-    const [showHeadsetDropDown, setShowHeadsetDropDown] = useState(false);
+    const [showHeadsetDropDown, setShowHeadsetDropDown] = useState<boolean>(false);
     // State over of de bronnen gelaten zien moeten worden.
-	const [showBronnen, setShowBronnen] = useState(false);
+	const [showBronnen, setShowBronnen] = useState<boolean>(false);
     // Volgorde van informatie: true is standaard (<).
-	const [volgorde, setVolgorde] = useState(true);
+	const [volgorde, setVolgorde] = useState<boolean>(true);
     // Informatie over de headsets (geen JSON [deels] zodat het leven met de plaatjes een stuk makkelijker is).
     const headsets = new Map<string, object>([
         ["htcvive", {

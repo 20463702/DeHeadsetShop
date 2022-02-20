@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
 
 const Vergelijking = ({ headsets }: any) => {
-	const [displayedHeadsets, setDisplayedHeadsets]: any = useState([]);
-	const [displayTable, setDisplayTable]: any = useState(false);
+	const [displayedHeadsets, setDisplayedHeadsets] = useState<string[]>([]);
+	const [displayTable, setDisplayTable] = useState<boolean>(false);
 
 	// Vat alle afbeeldingen van de headsets en verwekt ze tot een JSX.Element afbeelding.
-	const getVergelijkingImgs = () => {
+	const getVergelijkingImgs = (): JSX.Element[] => {
 		let imgs: JSX.Element[] = [];
 		headsets.forEach((h: any) => {
 			imgs.push(
@@ -22,7 +22,7 @@ const Vergelijking = ({ headsets }: any) => {
 	//
 
 	// Voegt een headset toe aan de vergelijking.
-	const addHeadset = (headsetNaam: string) => {
+	const addHeadset = (headsetNaam: string): void => {
 		setDisplayTable(true);
 		if (displayedHeadsets.indexOf(headsetNaam) === -1) {
 			setDisplayedHeadsets([...displayedHeadsets, headsetNaam]);
@@ -32,7 +32,7 @@ const Vergelijking = ({ headsets }: any) => {
 	//
 
 	// Update de colommen van de tabel.
-	const updateColumns = () => {
+	const updateColumns = (): JSX.Element[] => {
 		let output = new Array<JSX.Element>();
 		let id = 0;
 		displayedHeadsets.forEach((h: string) => {
@@ -58,7 +58,7 @@ const Vergelijking = ({ headsets }: any) => {
 	//
 
 	// Haalt een colom weg van de tabel.
-	const removeColumn = (col: string) => {
+	const removeColumn = (col: string): void => {
 		let updatedHeadsets = new Array<string>();
 		displayedHeadsets.forEach((h: string) => {
 			if (h.toLowerCase() !== col.toLowerCase()) {

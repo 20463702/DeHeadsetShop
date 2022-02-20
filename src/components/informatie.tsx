@@ -24,8 +24,8 @@ const Informatie = ({ info, volgorde, setVolgorde }: any) => {
 	])
 
 	// Vat alle informatie en pleurt het in (const) rawInfo
-	const getInfo = () => {
-		let informatie: any;
+	const getInfo = (): object[] => {
+		let informatie = new Array<object>();
 		if (info === "geschiedenis") {
 			informatie = geschiedenis;
 		} else if (info === "applicaties") {
@@ -38,14 +38,14 @@ const Informatie = ({ info, volgorde, setVolgorde }: any) => {
 	const rawInfo = getInfo();
 
 	// Flipt de volgorde.
-	const changeOrder = () => {
+	const changeOrder = (): void => {
 		// Benodigde interactie met state om de DOM te updated.
 		setVolgorde(!volgorde);
 		rawInfo.reverse();
 	}
 
 	// Convert alle informatie tot JSX elementen en voegt die toe aan de info array (return).
-	const displayInfo = () => {
+	const displayInfo = (): JSX.Element[] => {
 		let info: JSX.Element[] = [];
 
 		let n = 0;
@@ -78,7 +78,7 @@ const Informatie = ({ info, volgorde, setVolgorde }: any) => {
 	}
 
 	// Maakt een anker voor iedere sectie v.d. informatie en returned deze ankers.
-	const displayAnchors = () => {
+	const displayAnchors = (): JSX.Element[] => {
 		let anchors: JSX.Element[] = [];
 		let n = 0;
 		rawInfo.forEach((i: any) => {

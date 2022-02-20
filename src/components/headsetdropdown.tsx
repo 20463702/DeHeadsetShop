@@ -6,7 +6,6 @@ import imgRazorOSVR from '../img/headsets/RazorOSVR.png';
 import imgValveIndex from '../img/headsets/ValveIndex.png';
 
 const Headsetdropdown = ({ shown, setPage }: any) => {
-
     if (shown) {
         return (
             <>
