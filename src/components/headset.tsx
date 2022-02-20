@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 const Headset = ({ headsets }: any) => {
     const headsetName = new URLSearchParams(window.location.search).get("headsetName");
