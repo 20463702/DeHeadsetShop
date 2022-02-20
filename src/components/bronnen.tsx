@@ -16,7 +16,7 @@ const Bronnen = ({ showBronnen, setShowBronnen }: any) => {
 					{b.publicatie}.&nbsp;&nbsp;
 					{b.bronNaam}.&nbsp;&nbsp;
 					Geraadpleegd op {b.raadpleging},&nbsp;&nbsp;
-					van <a href={b.url}>{b.url}</a>
+					van <a href={b.url} target="_blank" rel="noreferrer">{b.url}</a>
 				</p>
 			)
 		});

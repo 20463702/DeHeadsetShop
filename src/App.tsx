@@ -15,7 +15,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 const App = () => {
     // Functioneert als een updated: zie header.tsx voor meer informatie hierover.
-    const [page, setPage] = useState("index");
+    const [page, setPage]: any = useState(null);
     // State over of de headset drop down menu wel of niet gelaten zien moet worden.
     const [showHeadsetDropDown, setShowHeadsetDropDown] = useState(false);
     // State over of de bronnen gelaten zien moeten worden.
@@ -93,6 +93,7 @@ const App = () => {
         <div>
             <BrowserRouter>
                 <Header
+                    page={page}
                     setPage={setCurrentPage}
                     toggleHeadsetsMenu={toggleHeadsetsMenu}
                     showHeadsetsMenu={showHeadsetDropDown}
