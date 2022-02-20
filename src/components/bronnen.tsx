@@ -25,7 +25,7 @@ const Bronnen = ({ showBronnen, setShowBronnen }: any) => {
 
 	return (
 		<>
-			<div className="button-container">
+			<div className="horizontal-flex-container">
 				<button
 					className={showBronnen ? "button-selected" : ""}	
 					onClick={() => {toggleBronnen()}}

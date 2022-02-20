@@ -12,6 +12,7 @@ import imgOculusRift from './img/headsets/OculusRift.png';
 import imgRazorOSVR from './img/headsets/RazorOSVR.png';
 import imgValveIndex from './img/headsets/ValveIndex.png';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Footer from './components/footer';
 
 const App = () => {
     // Functioneert als een updated: zie header.tsx voor meer informatie hierover.
@@ -20,6 +21,8 @@ const App = () => {
     const [showHeadsetDropDown, setShowHeadsetDropDown] = useState(false);
     // State over of de bronnen gelaten zien moeten worden.
 	const [showBronnen, setShowBronnen] = useState(false);
+    // Volgorde van informatie: true is standaard (<).
+	const [volgorde, setVolgorde] = useState(true);
     // Informatie over de headsets (geen JSON [deels] zodat het leven met de plaatjes een stuk makkelijker is).
     const headsets = new Map<string, object>([
         ["htcvive", {
@@ -74,7 +77,7 @@ const App = () => {
             uitgeefDatum: "01-05-2019",
             img: imgValveIndex,
         }],
-    ])
+    ]);
 
     const toggleHeadsetsMenu = () => {
         setShowHeadsetDropDown(!showHeadsetDropDown);
@@ -85,10 +88,14 @@ const App = () => {
         setPage(page);
         setShowHeadsetDropDown(false);
         setShowBronnen(false);
+        setVolgorde(false);
+        document.title =
+            page === null ? "DeHeadsetShop" :
+            `${page} - DeHeadsetShop`;
     }
     //
 
-
+    console.log("213.10.151.91");
     return (
         <div>
             <BrowserRouter>
@@ -99,21 +106,49 @@ const App = () => {
                     showHeadsetsMenu={showHeadsetDropDown}
                 />
                 <HeadsetDropDown
+                    setPage={setPage}
                     shown={showHeadsetDropDown}
                 />
 
                 <Routes>
-                    <Route path="/" element={<Index/>} />
-                    <Route path="/geschiedenis" element={<Informatie info="geschiedenis"/>} />
-                    <Route path="/applicaties" element={<Informatie info="applicaties"/>} />
-                    <Route path="/vergelijking" element={<Vergelijking headsets={headsets}/>} />
-                    <Route path="/headset" element={<Headset headsets={headsets}/>}/>
+                    <Route
+                        path="/"
+                        element={<Index/>}
+                    />
+                    <Route
+                        path="/geschiedenis"
+                        element=
+                            {<Informatie
+                                volgorde={volgorde}
+                                setVolgorde={setVolgorde}
+                                info="geschiedenis"
+                            />}
+                    />
+                    <Route
+                        path="/applicaties"
+                        element=
+                            {<Informatie
+                                volgorde={volgorde}
+                                setVolgorde={setVolgorde}
+                                info="applicaties"
+                            />}
+                    />
+                    <Route
+                        path="/vergelijking"
+                        element={<Vergelijking headsets={headsets}/>}
+                    />
+                    <Route
+                        path="/headset"
+                        element={<Headset headsets={headsets}/>}
+                    />
                 </Routes>
 
                 <Bronnen
                     showBronnen={showBronnen}
                     setShowBronnen={setShowBronnen}
                 />
+
+                <Footer/>
             </BrowserRouter>
         </div>
     );

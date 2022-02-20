@@ -1,10 +1,10 @@
-import React, { useState } from 'react'
+import React from 'react'
 import PropTypeos from 'prop-types';
 import geschiedenis from '../json/geschiedenis.json';
 import applicaties from '../json/applicaties.json';
 
-const Informatie = ({ info }: any) => {
-	const [volgorde, setVolgorde] = useState(true);
+const Informatie = ({ info, volgorde, setVolgorde }: any) => {
+	// const [volgorde, setVolgorde] = useState(true);
 	const images = new Map<string, string>([
 		["360degreePainting", require("../img/geschiedenis/360deg_painting.png")],
 		["sensorama", require("../img/geschiedenis/sensorama.png")],
@@ -39,6 +39,7 @@ const Informatie = ({ info }: any) => {
 
 	// Flipt de volgorde.
 	const changeOrder = () => {
+		// Benodigde interactie met state om de DOM te updated.
 		setVolgorde(!volgorde);
 		rawInfo.reverse();
 	}
@@ -108,6 +109,8 @@ const Informatie = ({ info }: any) => {
 
 Informatie.propTypes = {
 	info: PropTypeos.string.isRequired,
+	volgorde: PropTypeos.any.isRequired,
+	setVolgorde: PropTypeos.func.isRequired,
 }
 
 export default Informatie

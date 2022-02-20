@@ -5,7 +5,8 @@ import imgOculusRift from '../img/headsets/OculusRift.png';
 import imgRazorOSVR from '../img/headsets/RazorOSVR.png';
 import imgValveIndex from '../img/headsets/ValveIndex.png';
 
-const Headsetdropdown = ({ shown }: any) => {
+const Headsetdropdown = ({ shown, setPage }: any) => {
+
     if (shown) {
         return (
             <>
@@ -13,16 +14,28 @@ const Headsetdropdown = ({ shown }: any) => {
                     de naam variabel uit de URL kan halen.*/}
                 <div id="headsets-container">
                     <a href="/headset?headsetName=htcvive">
-                        <img src={imgHTCVive} alt="HTCVive" />                
+                        <img
+                            src={imgHTCVive}
+                            alt="HTCVive"
+                        />
                     </a>
                     <a href="/headset?headsetName=oculusrift">
-                        <img src={imgOculusRift} alt="OculusRift" />                
+                        <img
+                            src={imgOculusRift}
+                            alt="OculusRift"
+                        />                
                     </a>
                     <a href="/headset?headsetName=razorosvr">
-                        <img src={imgRazorOSVR} alt="RazorOSVR" />                
+                        <img
+                            src={imgRazorOSVR}
+                            alt="RazorOSVR"
+                        />                
                     </a>
                     <a href="/headset?headsetName=valveindex">
-                        <img src={imgValveIndex} alt="ValveIndex" />                
+                        <img
+                            src={imgValveIndex}
+                            alt="ValveIndex"
+                        />                
                     </a>
                 </div>
                 <hr className="red"/>
@@ -36,6 +49,7 @@ const Headsetdropdown = ({ shown }: any) => {
 
 Headsetdropdown.propTypes = {
     shown: PropTypes.bool.isRequired,
+    setPage: PropTypes.func.isRequired,
 }
 
 export default Headsetdropdown
