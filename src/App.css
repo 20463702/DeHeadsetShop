@@ -1,9 +1,9 @@
 :root {
-    /* primaire kleur (primary color) */
+    /* primaire kleur */
     --pc: rgba(255, 50, 50, 1);
-    /* secundaire kleur (secondary color) */
+    /* secundaire kleur */
     --sc: rgba(255, 255, 255, 1);
-    /* achtergrond kleur (background color) */
+    /* achtergrond kleur */
     --bgc: rgba(30, 30, 30, 1);
 }
 
@@ -11,6 +11,7 @@
 html {
     margin: 0;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     scroll-behavior: smooth;
     background-color: rgba(50, 50, 50, 1);
@@ -65,8 +66,11 @@ body {
     margin-top: 0;
     padding-top: 0.5em;
     padding-bottom: 0.5em;
-    background-image: linear-gradient(135deg, rgba(255, 20, 20, 1), rgba(255, 80, 80, 1));
     text-align: center;
+}
+
+#title {
+    background-image: linear-gradient(135deg, rgba(255, 20, 20, 1), rgba(255, 80, 80, 1));
 }
 
 #footer {
@@ -74,7 +78,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    background-image: linear-gradient(-135deg, rgba(255, 20, 20, 1), rgba(255, 80, 80, 1)) !important;
+    background-image: linear-gradient(-45deg, rgba(255, 20, 20, 1), rgba(255, 80, 80, 1));
 }
 
 #footer h2 {
@@ -98,12 +102,12 @@ button {
 
 .button-selected {
     cursor: pointer;
-    color: var(--bgc) !important;
-    background-color: var(--sc) !important;
+    color: var(--bgc);
+    background-color: var(--sc);
 }
     .button-selected:hover {
-        color: var(--sc) !important;
-        background-color: var(--bgc) !important;
+        color: var(--sc);
+        background-color: var(--bgc);
     }
 
 /* Headset drop-down menu gerelateerde CSS (HeadsetDropDown component) */

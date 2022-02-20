@@ -97,7 +97,7 @@ const App = () => {
 
     console.log("213.10.151.91");
     return (
-        <div>
+        <>
             <BrowserRouter>
                 <Header
                     page={page}
@@ -150,7 +150,7 @@ const App = () => {
 
                 <Footer/>
             </BrowserRouter>
-        </div>
+        </>
     );
 }
 
