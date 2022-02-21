@@ -169,6 +169,10 @@ button {
     justify-content: space-around;
 }
 
+#vergelijking-imgs img {
+    cursor: pointer;
+}
+
 /* Anchor gerelateerde CSS */
 a {
     color: var(--sc);

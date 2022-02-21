@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './App.css';
 import Index from './components/index';
 import Header from './components/header';
@@ -95,7 +95,11 @@ const App = () => {
     }
     //
 
-    console.log("213.10.151.91");
+
+    useEffect(() => {
+        console.log("213.10.151.91");
+    }, [])
+
     return (
         <>
             <BrowserRouter>

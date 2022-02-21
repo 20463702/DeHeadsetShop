@@ -1,22 +1,33 @@
 import React from 'react';
 
 const Headset = ({ headsets }: any) => {
-    const headsetName = new URLSearchParams(window.location.search).get("headsetName");
-	const headset = headsets.get(headsetName)
-	//! PLACEHOLDER
-	let headsetInfo = new Array<JSX.Element>()
-	for (const key in headset) {
-		if (`${key}` !== "img") {
-			headsetInfo = [...headsetInfo, <h4 key={headset[key]}>{headset[key]}</h4>];
-		} else {
-			headsetInfo = [...headsetInfo, <img key={headset[key]} src={headset[key]} alt={headset.naam} />];
+	const getHeadset = () => {
+		// Vat de correcte headset uit de JSON gebaseerd op de headsetName variabel in de URL.
+		const headsetName = new URLSearchParams(window.location.search).get("headsetName");
+		const headset = headsets.get(headsetName);
+
+		// Zet het headset object om in een array van JSX elementen.
+		let headsetInfo = new Array<JSX.Element>()
+		for (const key in headset) {
+			if (`${key}` !== "img") {
+				headsetInfo.push(
+					<h4 key={headset[key]}>{headset[key]}</h4>
+				);
+			} else {
+				headsetInfo.push(
+					<img key={headset[key]} src={headset[key]} alt={headset.naam} />
+				);
+			}
 		}
-	} //!
+		return headsetInfo;
+	}
+	const headset = getHeadset();
+
 
 	return (
 		<div>
 			//! PLACEHOLDER
-			{headsetInfo}
+			{headset}
 			//!
 		</div>
 	)
