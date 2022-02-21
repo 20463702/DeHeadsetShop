@@ -14,17 +14,8 @@ import imgValveIndex from './img/headsets/ValveIndex.png';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Footer from './components/footer';
 
-const App = () => {
-    // Functioneert als een updated: zie header.tsx voor meer informatie hierover.
-    const [page, setPage]: any = useState<string|null>(null);
-    // State over of de headset drop down menu wel of niet gelaten zien moet worden.
-    const [showHeadsetDropDown, setShowHeadsetDropDown] = useState<boolean>(false);
-    // State over of de bronnen gelaten zien moeten worden.
-	const [showBronnen, setShowBronnen] = useState<boolean>(false);
-    // Volgorde van informatie: true is standaard (<).
-	const [order, setOrder] = useState<boolean>(true);
-    // Informatie over de headsets (geen JSON [deels] zodat het leven met de plaatjes een stuk makkelijker is).
-    const headsets = new Map<string, object>([
+const getHeadsets = (): Map<string, object> => {
+    return new Map<string, object>([
         ["htcvive", {
             naam: "HTCVive",
             beeldscherm: "OLED",
@@ -78,6 +69,18 @@ const App = () => {
             img: imgValveIndex,
         }],
     ]);
+}
+
+const App = () => {
+    // Functioneert als een updated: zie header.tsx voor meer informatie hierover.
+    const [page, setPage]: any = useState<string|null>(null);
+    // State over of de headset drop down menu wel of niet gelaten zien moet worden.
+    const [showHeadsetDropDown, setShowHeadsetDropDown] = useState<boolean>(false);
+    // State over of de bronnen gelaten zien moeten worden.
+	const [showBronnen, setShowBronnen] = useState<boolean>(false);
+    // Volgorde van informatie: true is standaard (<).
+	const [order, setOrder] = useState<boolean>(true);
+    // Informatie over de headsets (geen JSON [deels] zodat het leven met de plaatjes een stuk makkelijker is).
 
     const toggleHeadsetsMenu = () => {
         setShowHeadsetDropDown(!showHeadsetDropDown);
@@ -139,11 +142,11 @@ const App = () => {
                     />
                     <Route
                         path="/vergelijking"
-                        element={<Vergelijking headsets={headsets}/>}
+                        element={<Vergelijking headsets={getHeadsets()}/>}
                     />
                     <Route
                         path="/headset"
-                        element={<Headset headsets={headsets}/>}
+                        element={<Headset headsets={getHeadsets()}/>}
                     />
                 </Routes>
 
