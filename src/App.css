@@ -178,6 +178,11 @@ a {
     color: var(--sc);
 }
 
+.horizontal-flex-container a {
+    height: 3.2em;
+    width: 12em;
+}
+
 #anchor-display {
     margin: 10em;
     margin-top: 2em;
@@ -216,4 +221,9 @@ a {
 
 hr.red {
     color: var(--pc);
+}
+
+/* Luie oplossing, mag NIET in productie */
+#header div a {
+    cursor: unset;
 }
