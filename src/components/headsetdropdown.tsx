@@ -5,7 +5,7 @@ import imgOculusRift from '../img/headsets/OculusRift.png';
 import imgRazorOSVR from '../img/headsets/RazorOSVR.png';
 import imgValveIndex from '../img/headsets/ValveIndex.png';
 
-const Headsetdropdown = ({ shown, setPage }: any) => {
+const Headsetdropdown = ({ shown, set, setPage }: any) => {
     if (shown) {
         return (
             <>

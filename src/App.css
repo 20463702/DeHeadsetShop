@@ -39,7 +39,7 @@ body {
 .text-container img {
     border: 2px solid var(--sc);
     border-radius: 1em;
-    max-height: 15em;
+    max-height: em;
     max-width: 20em;
 }
 

@@ -4,7 +4,6 @@ import geschiedenis from '../json/geschiedenis.json';
 import applicaties from '../json/applicaties.json';
 
 const Informatie = ({ info, order, setOrder }: any) => {
-	// const [volgorde, setVolgorde] = useState(true);
 	const images = new Map<string, string>([
 		["360degreePainting", require("../img/geschiedenis/360deg_painting.png")],
 		["sensorama", require("../img/geschiedenis/sensorama.png")],
@@ -13,7 +12,7 @@ const Informatie = ({ info, order, setOrder }: any) => {
 		["VPLResearch", require("../img/geschiedenis/VPL-research-vr-testing.png")],
 		["virtualEnvironmentWorkstation", require("../img/geschiedenis/virtual-environment-workstation-project-nasa.png")],
 		["vietnam", require("../img/geschiedenis/virtual-vietnam-vr.png")],
-		["googleStreetview", ""], //TODO Add image
+		["googleStreetview", require("../img/geschiedenis/allicht_okkomodatie.png")],
 		["oculusKickstarter", require("../img/geschiedenis/oculus_rift_kickstarter.png")],
 		["halfDome", require("../img/geschiedenis/half-dome.png")],
 		["oculusQuest2", require("../img/geschiedenis/oculus-quest-2.png")],
@@ -46,7 +45,7 @@ const Informatie = ({ info, order, setOrder }: any) => {
 
 	// Convert alle informatie tot JSX elementen en voegt die toe aan de info array (return).
 	const displayInfo = (): JSX.Element[] => {
-		let info: JSX.Element[] = [];
+		let info = new Array<JSX.Element>();
 
 		let n = 0;
 		rawInfo.forEach((i: any) => {
@@ -79,7 +78,7 @@ const Informatie = ({ info, order, setOrder }: any) => {
 
 	// Maakt een anker voor iedere sectie v.d. informatie en returned deze ankers.
 	const displayAnchors = (): JSX.Element[] => {
-		let anchors: JSX.Element[] = [];
+		let anchors = new Array<JSX.Element>();
 		let n = 0;
 		rawInfo.forEach((i: any) => {
 			anchors.push(

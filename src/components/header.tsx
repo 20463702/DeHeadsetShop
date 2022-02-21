@@ -12,8 +12,8 @@ const Header = ({ page, setPage, toggleHeadsetsMenu, showHeadsetsMenu }: any) =>
 				<div className="horizontal-flex-container">
 					<Link to="/">
 						<button
-							className={page === null ? "button-selected" : ""}
-							onClick={() => {setPage(null)}}>
+							className={page === "index" ? "button-selected" : ""}
+							onClick={() => {setPage("index")}}>
 							Index
 						</button>
 					</Link>
