@@ -19,9 +19,6 @@ html {
 
 body {
     margin: 0;
-    top: 0;
-    bottom: 0;
-    position: absolute;
     width: 100%;
     color: var(--sc);
     background-color: var(--bgc);
