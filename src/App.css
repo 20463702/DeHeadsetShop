@@ -19,7 +19,10 @@ html {
 
 body {
     margin: 0;
-    width: 1024px;
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    width: 100%;
     color: var(--sc);
     background-color: var(--bgc);
 }
@@ -27,7 +30,6 @@ body {
 /* Tekst en afbeelding gerelateerde CSS */
 .text-container {
     margin: 2em;
-    margin-left: 5em;
     margin-right: 5em;
 }
 
@@ -56,6 +58,12 @@ body {
     width: 30em;
 }
 
+#information-container {
+    display: flex;
+    flex-direction: column; 
+    margin-left: 22em;
+}
+
 /* Header/Footer CSS */
 #header {
     top: 0;
@@ -75,6 +83,9 @@ body {
 
 #footer {
     padding: 1em;
+    left: 0;
+    right: 0;
+    bottom: 0;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -119,6 +130,8 @@ button {
 
 #headsets-container img {
     margin: 2em;
+    margin-left: 10em;
+    margin-right: 10em;
     border: 1px solid var(--sc);
     border-radius: 1em;
     padding: 0.1em;

@@ -101,7 +101,10 @@ const Informatie = ({ info, order, setOrder }: any) => {
 			 </div>
 
 			<h3 id="change-volgorde" onClick={changeOrder}>Volgorde ⟳</h3>
-			{displayInfo()}
+
+			<div id="information-container">
+				{displayInfo()}
+			</div>
 		</>
 	);
 }

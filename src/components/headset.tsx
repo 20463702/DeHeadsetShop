@@ -21,16 +21,15 @@ const Headset = ({ headsets }: any) => {
 		}
 		return headsetInfo;
 	}
-	const headset = getHeadset();
 
 
 	return (
-		<div>
+		<>
 			//! PLACEHOLDER
-			{headset}
+			{getHeadset()}
 			//!
-		</div>
-	)
+		</>
+	);
 }
 
 export default Headset

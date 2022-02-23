@@ -13,6 +13,7 @@ import imgRazorOSVR from './img/headsets/RazorOSVR.png';
 import imgValveIndex from './img/headsets/ValveIndex.png';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Footer from './components/footer';
+import Bestelling from './components/bestelling';
 
 const getHeadsets = (): Map<string, object> => {
     return new Map<string, object>([
@@ -147,6 +148,10 @@ const App = () => {
                     <Route
                         path="/headset"
                         element={<Headset headsets={getHeadsets()}/>}
+                    />
+                    <Route
+                        path="/bestelling"
+                        element={<Bestelling/>}
                     />
                 </Routes>
 
