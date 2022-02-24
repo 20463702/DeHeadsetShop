@@ -38,7 +38,6 @@ const Informatie = ({ info, order, setOrder }: any) => {
 
 	// Flipt de volgorde.
 	const changeOrder = (): void => {
-		// Benodigde interactie met state om de DOM te updated.
 		setOrder(!order);
 		rawInfo.reverse();
 	}
@@ -54,12 +53,12 @@ const Informatie = ({ info, order, setOrder }: any) => {
 					<h2>{i.title}</h2>
 					<div className="par-text">
 						<div>
-							<p>
+							<p className="par-text__paragraph">
 								{i.par1}
 							</p>
 							{
 								i.par2 === undefined ? "" : (
-									<p>{i.par2}</p>
+									<p className="par-text__paragraph">{i.par2}</p>
 								)
 							}
 						</div>

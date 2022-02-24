@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import './App.css';
+import './App.scss';
 import Index from './components/index';
 import Header from './components/header';
 import Headset from './components/headset';

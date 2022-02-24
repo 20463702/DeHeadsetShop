@@ -1,0 +1,25 @@
+button {
+    cursor: pointer;
+    margin: 1em;
+    padding: 0.5em;
+    border-radius: 1em;
+    width: 13em;
+    color: color("accent");
+    background-color: color("secondary");
+
+    &:hover {
+        color: color("secondary");
+        background-color: color("accent");
+    }
+}
+
+.button-selected {
+    @extend button;
+    color: color("secondary");
+    background-color: color("accent");
+
+    &:hover {
+        color: color("accent");
+        background-color: color("secondary");
+    }
+}

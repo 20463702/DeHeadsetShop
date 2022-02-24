@@ -1,0 +1,32 @@
+@import './scss-components/variables';
+@import './scss-components/text';
+@import './scss-components/header-footer';
+@import './scss-components/buttons';
+@import './scss-components/dropDownMenu';
+@import './scss-components/vergelijkingTable';
+@import './scss-components/anchors';
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    // width: 1024px;
+    color: color(accent);
+    background-color: color(secondary);
+}
+
+/* Misc CSS */
+.horizontal-flex-container {
+    @include genericFlexBox;
+}
+
+#change-volgorde {
+    cursor: pointer;
+    margin-left: 10em;
+}
+
+hr.red {
+    color: color("primary");
+}

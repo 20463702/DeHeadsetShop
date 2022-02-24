@@ -1,0 +1,33 @@
+$colors: (
+    "primary": rgba(255, 80, 80, 1),
+    "accent": rgba(255, 255, 255, 1),
+    "secondary": rgba(40, 40, 40, 1),
+);
+
+@function color($name) {
+    @return map-get($colors, $name);
+}
+
+$gradients: (
+    "tr-bl": linear-gradient(135deg, rgba(255, 20, 20, 1), rgba(255, 80, 80, 1)),
+    "bl-tr": linear-gradient(-45deg, rgba(255, 20, 20, 1), rgba(255, 80, 80, 1)),
+);
+
+@function gradient($name) {
+    @return map-get($gradients, $name);
+}
+
+@mixin genericFlexBox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+@mixin standardImage {
+    margin-bottom: 0.2em;
+    border: 2px solid color("accent");
+    border-radius: 0.5em;
+    padding: 0;
+    height: 3.2em;
+    width: 12em;
+}

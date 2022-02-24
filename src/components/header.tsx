@@ -14,7 +14,7 @@ const Header = ({ page, setPage, toggleHeadsetsMenu, showHeadsetsMenu }: any) =>
 						<button
 							className={page === "index" ? "button-selected" : ""}
 							onClick={() => {setPage("index")}}>
-							Index
+							Home
 						</button>
 					</Link>
 					<Link to="/geschiedenis">

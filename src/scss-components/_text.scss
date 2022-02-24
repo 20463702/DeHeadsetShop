@@ -1,0 +1,41 @@
+@import './variables';
+
+#information-container {
+    @include genericFlexBox;
+    align-items: center;
+    flex-direction: column; 
+    margin-left: 5%;
+}
+
+.text-container {
+    margin: 2em;
+    margin-right: 8em;
+    min-width: 50em;
+
+    img {
+        border: 2px solid color(accent);
+        border-radius: 0.2em;
+        max-height: 30em;
+        max-width: 20em;
+    }
+
+    h2 {
+        margin-left: 3em;
+    }
+}
+
+.par-text {
+    display: flex;
+
+    img {
+        margin-left: 2em;
+        width: 30em;
+    }
+
+    #{&}__paragraph {
+        padding-left: 1em;
+        border-left: 1px solid color("primary");
+        width: 30em;
+        text-align: justify;
+    }
+}

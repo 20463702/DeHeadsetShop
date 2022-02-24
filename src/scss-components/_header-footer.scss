@@ -1,0 +1,25 @@
+#title, #footer {
+    margin-top: 0;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    text-align: center;
+}
+
+#title {
+    background-image: gradient("tr-bl");
+}
+
+#footer {
+    @include genericFlexBox;
+    flex-direction: column;
+    padding: 1em;
+    background-image: gradient("bl-tr");
+
+    h2 {
+        margin: 0;
+    }
+}
+
+#header div a {
+    cursor: unset;
+}
