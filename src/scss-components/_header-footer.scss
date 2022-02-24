@@ -6,14 +6,14 @@
 }
 
 #title {
-    background-image: gradient("tr-bl");
+    background-image: gradient(tr-bl);
 }
 
 #footer {
     @include genericFlexBox;
     flex-direction: column;
     padding: 1em;
-    background-image: gradient("bl-tr");
+    background-image: gradient(bl-tr);
 
     h2 {
         margin: 0;

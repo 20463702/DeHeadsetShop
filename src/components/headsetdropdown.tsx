@@ -9,8 +9,6 @@ const Headsetdropdown = ({ shown, set, setPage }: any) => {
     if (shown) {
         return (
             <>
-                {/* Wordt hier gebruik gemaakt van <a>'s in plaats van <Links>'s zodat de pagina refreshed en de <Headset/> component 
-                    de naam variabel uit de URL kan halen.*/}
                 <div id="dropdown-container">
                     <a href="/headset?headsetName=htcvive">
                         <img
