@@ -1,40 +1,37 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import imgHTCVive from '../img/headsets/HTCVive.png';
-import imgOculusRift from '../img/headsets/OculusRift.png';
-import imgRazorOSVR from '../img/headsets/RazorOSVR.png';
-import imgValveIndex from '../img/headsets/ValveIndex.png';
 
-const Headsetdropdown = ({ shown, set, setPage }: any) => {
+const Headsetdropdown = ({ headsets, shown, setPage }: any) => {
+    const images = new Map<string, string>([
+        ["HTCVive", require("../img/headsets/HTCVive.png")],
+        ["OculusRift", require("../img/headsets/OculusRift.png")],
+        ["RazorOSVR", require("../img/headsets/ValveIndex.png")],
+        ["ValveIndex", require("../img/headsets/ValveIndex.png")],
+    ]);
+
+    const getImages = () => {
+        let imgs = new Array<JSX.Element>();
+        headsets.forEach((h: any) => {
+            imgs.push(
+                <a href={`/headset?headsetName=${h.naam.toLowerCase()}`}>
+                    <img
+                        src={images.get(h.naam)}
+                        alt={`Plaatje van ${h.naam}`}
+                        key={h.naam}
+                    />
+                </a>
+            );
+        });
+        return imgs;
+    }
+
     if (shown) {
         return (
             <>
                 <div id="dropdown-container">
-                    <a href="/headset?headsetName=htcvive">
-                        <img
-                            src={imgHTCVive}
-                            alt="HTCVive"
-                        />
-                    </a>
-                    <a href="/headset?headsetName=oculusrift">
-                        <img
-                            src={imgOculusRift}
-                            alt="OculusRift"
-                        />                
-                    </a>
-                    <a href="/headset?headsetName=razorosvr">
-                        <img
-                            src={imgRazorOSVR}
-                            alt="RazorOSVR"
-                        />                
-                    </a>
-                    <a href="/headset?headsetName=valveindex">
-                        <img
-                            src={imgValveIndex}
-                            alt="ValveIndex"
-                        />                
-                    </a>
+                    {getImages()}
                 </div>
+
                 <hr className="red"/>
             </>
         )
@@ -42,11 +39,6 @@ const Headsetdropdown = ({ shown, set, setPage }: any) => {
     else {
         return <></>;
     }
-}
-
-Headsetdropdown.propTypes = {
-    shown: PropTypes.bool.isRequired,
-    setPage: PropTypes.func.isRequired,
 }
 
 export default Headsetdropdown

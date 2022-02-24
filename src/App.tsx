@@ -114,6 +114,7 @@ const App = () => {
                     showHeadsetsMenu={showHeadsetDropDown}
                 />
                 <HeadsetDropDown
+                    headsets={getHeadsets()}
                     setPage={setPage}
                     shown={showHeadsetDropDown}
                 />

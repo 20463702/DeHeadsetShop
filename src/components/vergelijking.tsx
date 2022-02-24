@@ -6,7 +6,7 @@ const Vergelijking = ({ headsets }: any) => {
 
 	// Vat alle afbeeldingen van de headsets en verwekt ze tot een JSX.Element afbeelding.
 	const getVergelijkingImgs = (): JSX.Element[] => {
-		let imgs: JSX.Element[] = [];
+		let imgs = new Array<JSX.Element>();
 		headsets.forEach((h: any) => {
 			imgs.push(
 				<img
