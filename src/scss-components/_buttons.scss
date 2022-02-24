@@ -23,3 +23,14 @@ button {
         background-color: color(secondary);
     }
 }
+
+button.red {
+    border-color: color(primary);
+    background-color: color(secondary);
+    color: color(accent);
+
+    &:hover {
+        background-color: color(primary);
+        color: color(secondary);
+    }
+}

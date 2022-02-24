@@ -1,10 +1,12 @@
 import React from 'react'
 
-const bestelling = () => {
+const bestelling = ({ headsets }: any) => {
+	const headsetName = new URLSearchParams(window.location.search).get("headsetName");
+	const headset = headsets.get(headsetName);
+
   return (
     <>
-        //! PLACEHOLDER
-        bestelling
+        bestelling {headset.naam}
     </>
   )
 }

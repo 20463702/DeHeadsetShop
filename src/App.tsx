@@ -152,7 +152,7 @@ const App = () => {
                     />
                     <Route
                         path="/bestelling"
-                        element={<Bestelling/>}
+                        element={<Bestelling headsets={getHeadsets()}/>}
                     />
                 </Routes>
 
