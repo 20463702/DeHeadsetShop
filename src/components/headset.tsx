@@ -1,33 +1,33 @@
 import React from 'react';
 
 const Headset = ({ headsets }: any) => {
-	const getHeadset = () => {
-		// Vat de correcte headset uit de JSON gebaseerd op de headsetName variabel in de URL.
-		const headsetName = new URLSearchParams(window.location.search).get("headsetName");
-		const headset = headsets.get(headsetName);
-
-		// Zet het headset object om in een array van JSX elementen.
-		let headsetInfo = new Array<JSX.Element>()
-		for (const key in headset) {
-			if (`${key}` !== "img") {
-				headsetInfo.push(
-					<h4 key={headset[key]}>{headset[key]}</h4>
-				);
-			} else {
-				headsetInfo.push(
-					<img key={headset[key]} src={headset[key]} alt={headset.naam} />
-				);
-			}
-		}
-		return headsetInfo;
-	}
-
+	// Vat de correcte headset uit de JSON gebaseerd op de headsetName variabel in de URL.
+	const headsetName = new URLSearchParams(window.location.search).get("headsetName");
+	const headset = headsets.get(headsetName);
 
 	return (
 		<>
-			//! PLACEHOLDER
-			{getHeadset()}
-			//!
+			<h1 className="title">{headset.naam}</h1>
+			<div className="headset-info-container">
+				<div>
+					<video controls={true}>
+						<source src={headset.vid} type="video/mp4"/>
+					</video>
+				</div>
+				<div className="specifications">
+					<h1>Specificaties</h1>
+					<ul>
+						<li>Beeldscherm: {headset.beeldscherm}</li>
+						<li>Resolutie: {headset.xResolutie}x{headset.yResolutie}</li>
+						<li>Refreshrate: {headset.refreshRate} Hz</li>
+						<li>PPD: {headset.PPD}</li>
+						<li>FOV: {headset.FOV}</li>
+						<li>Gewicht: {headset.gewicht}</li>
+						<li>Prijs: {headset.prijs}</li>
+						<li>Datum v. Uitgave: {headset.uitgeefDatum}</li>
+					</ul>
+				</div>
+			</div>
 		</>
 	);
 }

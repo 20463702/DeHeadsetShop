@@ -30,14 +30,3 @@
     }
 }
 
-#vergelijking-imgs {
-    margin-top: 2em;
-    margin-bottom: 3em;
-    display: flex;
-    justify-content: space-around;
-
-    img {
-        @include standardImage;
-        cursor: pointer;
-    }
-}

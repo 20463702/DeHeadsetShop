@@ -3,11 +3,17 @@
 @import './scss-components/header-footer';
 @import './scss-components/buttons';
 @import './scss-components/dropDownMenu';
-@import './scss-components/vergelijkingTable';
 @import './scss-components/anchors';
+@import './scss-components/tables';
+@import './scss-components/headsets';
 
 html {
     scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
 }
 
 body {
@@ -28,4 +34,22 @@ body {
 
 hr.red {
     color: color(primary);
+}
+
+#vergelijking-imgs {
+    margin-top: 2em;
+    margin-bottom: 3em;
+    display: flex;
+    justify-content: space-around;
+
+    img {
+        @include standardImage;
+        cursor: pointer;
+    }
+}
+
+.pinned-bottom {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }

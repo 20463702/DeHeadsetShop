@@ -7,10 +7,6 @@ import Informatie from './components/informatie';
 import Vergelijking from './components/vergelijking';
 import Bronnen from './components/bronnen';
 import HeadsetDropDown from './components/headsetdropdown';
-import imgHTCVive from './img/headsets/HTCVive.png';
-import imgOculusRift from './img/headsets/OculusRift.png';
-import imgRazorOSVR from './img/headsets/RazorOSVR.png';
-import imgValveIndex from './img/headsets/ValveIndex.png';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Footer from './components/footer';
 import Bestelling from './components/bestelling';
@@ -28,7 +24,8 @@ const getHeadsets = (): Map<string, object> => {
             gewicht: 468,
             prijs: 400,
             uitgeefDatum: "05-04-2016",
-            img: imgHTCVive,
+            img: require("./img/headsets/HTCVive.png"),
+            vid: require("./vids/HTCVive.mp4"),
         }],
         ["oculusrift", {
             naam: "OculusRift",
@@ -41,7 +38,8 @@ const getHeadsets = (): Map<string, object> => {
             gewicht: 470,
             prijs: 350,
             uitgeefDatum: "28-03-2016",
-            img: imgOculusRift,
+            img: require("./img/headsets/OculusRift.png"),
+            vid: require("./vids/OculusRift.mp4"),
         }],
         ["razorosvr", {
             naam: "RazorOSVR",
@@ -54,7 +52,8 @@ const getHeadsets = (): Map<string, object> => {
             gewicht: 650,
             prijs: 400,
             uitgeefDatum: "20-07-2016",
-            img: imgRazorOSVR,
+            img: require("./img/headsets/RazorOSVR.png"),
+            vid: require("./vids/RazorOSVR.mp4"),
         }],
         ["valveindex", {
             naam: "ValveIndex",
@@ -67,7 +66,8 @@ const getHeadsets = (): Map<string, object> => {
             gewicht: 809,
             prijs: 1000,
             uitgeefDatum: "01-05-2019",
-            img: imgValveIndex,
+            img: require("./img/headsets/ValveIndex.png"),
+            vid: require("./vids/ValveIndex.mp4"),
         }],
     ]);
 }
@@ -161,7 +161,9 @@ const App = () => {
                     setShowBronnen={setShowBronnen}
                 />
 
-                <Footer/>
+                {page === "vergelijking" ? 
+                <div className="pinned-bottom"><Footer/></div> : <Footer/>}
+
             </BrowserRouter>
         </>
     );

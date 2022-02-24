@@ -38,18 +38,18 @@ const Vergelijking = ({ headsets }: any) => {
 		displayedHeadsets.forEach((h: string) => {
 			let headset = headsets.get(h);
 			output.push(
-				<div key={id} id={`${id}`} onClick={() => {removeColumn(headset.naam)}} className="vergelijking-table-column">
-					<img src={headset.img} alt={headset.naam}/>
-					<h3>{headset.naam}</h3>
-					<h3>{headset.beeldscherm}</h3>
-					<h3>{headset.xResolutie}x{headset.yResolutie}</h3>
-					<h3>{headset.refreshRate}</h3>
-					<h3>{headset.PPD}</h3>
-					<h3>{headset.FOV}</h3>
-					<h3>{headset.gewicht}</h3>
-					<h3>{headset.prijs}</h3>
-					<h3>{headset.uitgeefDatum}</h3>
-				</div>
+				<tr key={id} id={`${id}`} onClick={() => {removeColumn(headset.naam)}} className="active">
+					<td className="img-container"><img src={headset.img} alt={headset.naam}/></td>
+					<td>{headset.naam}</td>
+					<td>{headset.beeldscherm}</td>
+					<td>{headset.xResolutie}x{headset.yResolutie}</td>
+					<td>{headset.refreshRate}</td>
+					<td>{headset.PPD}</td>
+					<td>{headset.FOV}</td>
+					<td>{headset.gewicht}</td>
+					<td>{headset.prijs}</td>
+					<td>{headset.uitgeefDatum}</td>
+				</tr>
 			);
 			id++;
 		});
@@ -75,24 +75,29 @@ const Vergelijking = ({ headsets }: any) => {
 				{getVergelijkingImgs()}
 			</div>
 
-			{!displayTable ? "" : (<div id="vergelijking-table">
-				<div id="vergelijking-table-headers">
-					<h3>Naam:</h3>
-					<h3>Beeldscherm:</h3>
-					<h3>Resolutie:</h3>
-					<h3>Refresh Rate:</h3>
-					<h3>PPD:</h3>
-					<h3>FOV:</h3>
-					<h3>Gewicht:</h3>
-					<h3>Prijs:</h3>
-					<h3>Datum v. Uitgave:</h3>
-				</div>
-
-				{updateColumns()}
+			{!displayTable ? "" :
+			(<div className="table-container">
+				<table>
+					<tbody>
+						<tr>
+							<th className="img-container"></th>
+							<th>Naam:</th>
+							<th>Beeldscherm:</th>
+							<th>Resolutie:</th>
+							<th>Refresh Rate:</th>
+							<th>PPD:</th>
+							<th>FOV:</th>
+							<th>Gewicht:</th>
+							<th>Prijs:</th>
+							<th>Datum v. Uitgave:</th>
+						</tr>
+						{updateColumns()}
+					</tbody>
+				</table>
 			</div>
 			)}
 		</>
-	)
+	);
 }
 
 export default Vergelijking
