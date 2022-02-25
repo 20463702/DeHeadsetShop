@@ -2,6 +2,7 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    flex-direction: column;
 
     * {
         @media (max-width: 1024px) {
@@ -12,12 +13,24 @@
         }
     }
 
-    video {
-        @include standardBorder;
-        width: 50em;
+    #{&}__secondary {
+        display: flex;
     }
 
-    h1 {
+    video {
+        @include standardBorder;
+        @media (max-width: 1024px) {
+            width: 40em;
+            margin-right: 8em;
+        }
+        @media (min-width: 1025px) {
+            width: 50em;
+            margin-right: 10em;
+        }
+    }
+
+    h2 {
         margin: 2%;
+        margin-top: 16%;
     }
 }

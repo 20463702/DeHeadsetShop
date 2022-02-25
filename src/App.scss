@@ -6,6 +6,7 @@
 @import './scss-components/anchors';
 @import './scss-components/tables';
 @import './scss-components/headsets';
+@import './scss-components/recensies';
 
 * {
     margin: 0;
@@ -52,4 +53,9 @@ hr.red {
     position: absolute;
     bottom: 0;
     width: 100%;
+}
+
+.central {
+    display: flex;
+    justify-content: center;
 }
