@@ -6,7 +6,7 @@ const Headsetdropdown = ({ headsets, shown, setPage }: any) => {
         let imgs = new Array<JSX.Element>();
         headsets.forEach((h: any) => {
             imgs.push(
-                <a href={`/headset?headsetName=${h.naam.toLowerCase()}`}>
+                <a key={h.naam} href={`/headset?headsetName=${h.naam.toLowerCase()}`}>
                     <img
                         src={h.img}
                         alt={`Plaatje van ${h.naam}`}

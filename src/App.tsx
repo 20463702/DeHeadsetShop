@@ -102,7 +102,7 @@ const App = () => {
 
     useEffect(() => {
         console.log("213.10.151.91");
-    }, [])
+    }, []);
 
     return (
         <>
@@ -148,7 +148,10 @@ const App = () => {
                     />
                     <Route
                         path="/headset"
-                        element={<Headset headsets={getHeadsets()}/>}
+                        element={<Headset
+                            headsets={getHeadsets()}
+                            setPage={setPage}
+                        />}
                     />
                     <Route
                         path="/bestelling"

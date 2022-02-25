@@ -7,13 +7,13 @@
 @import './scss-components/tables';
 @import './scss-components/headsets';
 
-html {
-    scroll-behavior: smooth;
-}
-
 * {
     margin: 0;
     padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {

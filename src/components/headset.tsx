@@ -1,6 +1,10 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
-const Headset = ({ headsets }: any) => {
+const Headset = ({ headsets, setPage }: any) => {
+	useEffect(() => {
+		setPage(null);
+	}, []);
+
 	// Vat de correcte headset uit gebaseerd op de headsetName variabel in de URL.
 	const headsetName = new URLSearchParams(window.location.search).get("headsetName");
 	const headset = headsets.get(headsetName);
