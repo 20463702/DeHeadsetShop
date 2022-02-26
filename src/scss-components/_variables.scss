@@ -36,3 +36,6 @@ $gradients: (
     border: 2px solid color(accent);
     border-radius: 1em;
 }
+
+$mobile: 800px;
+$notMobile: $mobile + 1px;

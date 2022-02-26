@@ -10,39 +10,49 @@ const Header = ({ page, setPage, toggleHeadsetsMenu, showHeadsetsMenu }: any) =>
 				</div>
 				{/* De onClick functie is er voor de benodigde interactie met State */}
 				<div className="horizontal-flex-container">
-					<Link to="/">
+					<div>
+						<Link to="/">
+							<button
+								className={page === "index" ? "button-selected" : ""}
+								onClick={() => {setPage("index")}}>
+								Home
+							</button>
+						</Link>
+					</div>
+					<div>
+						<Link to="/geschiedenis">
+							<button
+								className={page === "geschiedenis" ? "button-selected" : ""}
+								onClick={() => {setPage("geschiedenis")}}>
+								Geschiedenis
+							</button>
+						</Link>
+					</div>
+					<div>
 						<button
-							className={page === "index" ? "button-selected" : ""}
-							onClick={() => {setPage("index")}}>
-							Home
+							className={showHeadsetsMenu ? "button-selected" : ""}
+							onClick={toggleHeadsetsMenu}>
+							Diverse Headsets
 						</button>
-					</Link>
-					<Link to="/geschiedenis">
-						<button
-							className={page === "geschiedenis" ? "button-selected" : ""}
-							onClick={() => {setPage("geschiedenis")}}>
-							Geschiedenis
-						</button>
-					</Link>
-					<button
-						className={showHeadsetsMenu ? "button-selected" : ""}
-						onClick={toggleHeadsetsMenu}>
-						Diverse Headsets
-					</button>
-					<Link to="/applicaties">
-						<button
-							className={page === "applicaties" ? "button-selected" : ""}
-							onClick={() => {setPage("applicaties")}}>
-							Applicaties
-						</button>
-					</Link>
-					<Link to="/vergelijking">
-						<button
-							className={page === "vergelijking" ? "button-selected" : ""}
-							onClick={() => {setPage("vergelijking")}}>
-							Vergelijking
-						</button>
-					</Link>
+					</div>
+					<div>
+						<Link to="/applicaties">
+							<button
+								className={page === "applicaties" ? "button-selected" : ""}
+								onClick={() => {setPage("applicaties")}}>
+								Applicaties
+							</button>
+						</Link>
+					</div>
+					<div>
+						<Link to="/vergelijking">
+							<button
+								className={page === "vergelijking" ? "button-selected" : ""}
+								onClick={() => {setPage("vergelijking")}}>
+								Vergelijking
+							</button>
+						</Link>
+					</div>
 				</div>
 			<div id="headsets-container"></div>
 			<hr className="red"/>

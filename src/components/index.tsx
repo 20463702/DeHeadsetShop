@@ -3,7 +3,9 @@ import React from 'react'
 const Index = () => {
 	return (
 		//! PLACEHOLDER
-		<>index</>
+		<>
+			<h1>index</h1>
+		</>
 		//!
 	)
 }

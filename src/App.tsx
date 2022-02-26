@@ -159,13 +159,15 @@ const App = () => {
                     />
                 </Routes>
 
+                {page === "geschiedenis" || page === "applicaties" ?
                 <Bronnen
                     showBronnen={showBronnen}
                     setShowBronnen={setShowBronnen}
-                />
+                /> : ""}
 
-                {page === "vergelijking" ? 
-                <div className="pinned-bottom"><Footer/></div> : <Footer/>}
+                {page === "vergelijking" ?
+                <div className="pinned-bottom"><Footer/></div> : 
+                <Footer/>}
 
             </BrowserRouter>
         </>

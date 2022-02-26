@@ -1,15 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import recensieText from '../json/recensies.json';
 
 const Recensies = () => {
-	const recensieText: Array<string> = [
-		"De beeldkwaliteit was een positieve verrassing. Ik had nog geen ervaring met “thuis” VR en het is allemaal veel geavanceerder dan ik had verwacht. Het kwaliteitsverlies, een punt dat op fora wel voorbij komt, is naar mijn idee verwaarloosbaar, helemaal in games zelf. Ook het geluid wordt vaak kritisch beoordeeld. Ik vind het niet denderend, maar ook zeker niet slecht of van een storende kwaliteit. Al met al kan ik de Quest 2 zeker aanraden. De prijs-kwaliteit verhouding is uitmuntend.",
-		"VR zet je van het een op het andere moment in een andere wereld. Maar dan ook ECHT. Deze headset heeft een dermate hoge resolutie dat het zicht kraakhelder is. Het geluid is gewoon goed te noemen. Zet het op een niveau dat omgevingsgeluiden wegvallen en je gaat volledig op in de virtuele wereld.",
-		"Absoluut een aanrader, veel mogelijkheden, het alsof je in je eigen wereld zit. Je past je algauw aan aan de omgeving",
-		"top product",
-		"👍",
-		"👎",
-	];
 	// Vat random users en text van verschillende API's.
 	const [userData, setUserData] = useState<Array<any>>();
 	useEffect(() => {

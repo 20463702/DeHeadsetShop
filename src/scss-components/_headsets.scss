@@ -1,31 +1,53 @@
 .headset-info-container {
+    @media (max-width: $mobile) {
+        flex-direction: row;
+    }
+
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     flex-direction: column;
 
     * {
-        @media (max-width: 1024px) {
-            margin-left: 0.4%;
+        @media (max-width: $mobile) {
+            margin-left: 0;
         }
-        @media (min-width: 1025px) {
-            margin-left: 5%;
+
+        @media (min-width: $notMobile) {
+            @media (max-width: 1024px) {
+                margin-left: 0.4%;
+            }
+
+            @media (min-width: 1025px) {
+                margin-left: 5%;
+            }
         }
     }
 
     #{&}__secondary {
+        @media (max-width: $mobile) {
+            flex-direction: column;
+        }
+
         display: flex;
     }
 
     video {
         @include standardBorder;
-        @media (max-width: 1024px) {
-            width: 40em;
-            margin-right: 8em;
+        @media (max-width: $mobile) {
+            width: 22em;
         }
-        @media (min-width: 1025px) {
-            width: 50em;
-            margin-right: 10em;
+
+        @media (min-width: $notMobile) {
+            @media (max-width: 1024px) {
+                width: 40em;
+                margin-right: 8em;
+            }
+
+            @media (min-width: 1025px) {
+                width: 50em;
+                margin-right: 10em;
+            }
         }
     }
 

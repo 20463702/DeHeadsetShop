@@ -12,7 +12,7 @@ const Informatie = ({ info, order, setOrder }: any) => {
 		["VPLResearch", require("../img/geschiedenis/VPL-research-vr-testing.png")],
 		["virtualEnvironmentWorkstation", require("../img/geschiedenis/virtual-environment-workstation-project-nasa.png")],
 		["vietnam", require("../img/geschiedenis/virtual-vietnam-vr.png")],
-		["googleStreetview", require("../img/geschiedenis/allicht_okkomodatie.png")],
+		["googleStreetview", require("../img/geschiedenis/okkomodatie.png")],
 		["oculusKickstarter", require("../img/geschiedenis/oculus_rift_kickstarter.png")],
 		["halfDome", require("../img/geschiedenis/half-dome.png")],
 		["oculusQuest2", require("../img/geschiedenis/oculus-quest-2.png")],

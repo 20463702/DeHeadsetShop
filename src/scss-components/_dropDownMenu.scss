@@ -2,6 +2,11 @@
     @include genericFlexBox;
 
     img {
+        @media (max-width: $mobile) {
+            width: 16em;
+            height: 4.5em;
+        }
+
         @include standardBorder;
         cursor: pointer;
         margin-top: 1em;

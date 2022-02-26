@@ -1,5 +1,16 @@
+/*Mobile View*/
 table {
+    @media (max-width: $mobile) {
+        font-size: 8px
+    }
+    word-wrap: break-word;
+
     * {
+        @media (max-width: $mobile) {
+            width: 0.1em;
+            border: 1px solid color(accent);
+        }
+
         width: 10em;
         height: 2em;
         text-align: center;
@@ -21,17 +32,24 @@ table {
     }
 
     .img-container {
+        @media (max-width: $mobile) {
+            visibility: hidden;
+            width: 0;
+        }
         width: 8em;
     }
 
     img {
+        @media (max-width: $mobile) {
+            visibility: hidden;
+            width: 0;
+        }
         border: 0;
         width: 8em;
     }
 }
 
 .table-container {
-    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;

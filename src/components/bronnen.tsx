@@ -10,7 +10,7 @@ const Bronnen = ({ showBronnen, setShowBronnen }: any) => {
 		let bronnen: JSX.Element[] = new Array<JSX.Element>();
 		bronnenJSON.forEach((b: any) => {
 			bronnen.push(
-				<p key={`${b.auteur} -- ${b.titel}`} className="text-container">
+				<p key={`${b.auteur} -- ${b.titel}`} className="bron">
 					{b.auteur}{b.auteur === "" ? "" : "."}&nbsp;
 					{b.titel}&nbsp;&nbsp;
 					{b.publicatie}.&nbsp;&nbsp;
@@ -34,7 +34,7 @@ const Bronnen = ({ showBronnen, setShowBronnen }: any) => {
 				</button>
 			</div>
 			{showBronnen ?
-			<div className="text-container">
+			<div className="horizontal-flex-container">
 				{getBronnen()}
 			</div> : <></>}
 		</>
