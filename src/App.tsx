@@ -10,6 +10,7 @@ import HeadsetDropDown from './components/headsetdropdown';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Footer from './components/footer';
 import Bestelling from './components/bestelling';
+import { browserName } from "react-device-detect";
 
 const getHeadsets = (): Map<string, object> => {
     return new Map<string, object>([
@@ -102,10 +103,13 @@ const App = () => {
 
     useEffect(() => {
         console.log("213.10.151.91");
+        if (browserName == "Edge")
+            console.error("GEEN EDGE GEBRUIKEN!!!");
     }, []);
 
     return (
         <>
+            {browserName == "Edge" ? <h1>Error 69420: Gelieve geen Edge gebruiken........</h1> : 
             <BrowserRouter>
                 <Header
                     page={page}
@@ -169,7 +173,7 @@ const App = () => {
                 <div className="pinned-bottom"><Footer/></div> : 
                 <Footer/>}
 
-            </BrowserRouter>
+            </BrowserRouter>}
         </>
     );
 }
