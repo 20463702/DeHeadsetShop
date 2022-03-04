@@ -2,7 +2,7 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <div id="footer">
+    <footer id="footer">
         <h2>
             Contact
         </h2>
@@ -14,7 +14,7 @@ const Footer = () => {
                 E-mail: <a href="mailto:siebevandijck0209@gmail.com">siebevandijck0209@gmail.com</a>
             </p>
         </div>
-    </div>
+    </footer>
   )
 }
 

@@ -70,7 +70,7 @@ const Vergelijking = ({ headsets }: any) => {
 	//
 
 	return (
-		<>
+		<main>
 			<div id="vergelijking-imgs">
 				{getVergelijkingImgs()}
 			</div>
@@ -96,7 +96,7 @@ const Vergelijking = ({ headsets }: any) => {
 				</table>
 			</div>
 			)}
-		</>
+		</main>
 	);
 }
 

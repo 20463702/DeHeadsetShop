@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const Header = ({ page, setPage, toggleHeadsetsMenu, showHeadsetsMenu }: any) => {
 	return (
-		<div id="header">
+		<header id="header">
 			<div id="title">
 				<h1>DeHeadsetShop</h1>
 				</div>
@@ -56,7 +56,7 @@ const Header = ({ page, setPage, toggleHeadsetsMenu, showHeadsetsMenu }: any) =>
 				</div>
 			<div id="headsets-container"></div>
 			<hr className="red"/>
-		</div>
+		</header>
 	)
 }
 

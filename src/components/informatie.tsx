@@ -91,7 +91,7 @@ const Informatie = ({ info, order, setOrder }: any) => {
 	}
 
 	return (
-		<>
+		<main>
 		 	<div id="anchor-display">
 				<h3>Secties</h3>
 				<div className="anchor-container">
@@ -104,7 +104,7 @@ const Informatie = ({ info, order, setOrder }: any) => {
 			<div id="information-container">
 				{displayInfo()}
 			</div>
-		</>
+		</main>
 	);
 }
 

@@ -103,13 +103,13 @@ const App = () => {
 
     useEffect(() => {
         console.log("213.10.151.91");
-        if (browserName == "Edge")
+        if (browserName === "Edge")
             console.error("GEEN EDGE GEBRUIKEN!!!");
     }, []);
 
     return (
         <>
-            {browserName == "Edge" ? <h1>Error 69420: Gelieve geen Edge gebruiken........</h1> : 
+            {browserName === "Edge" ? <h1>Error 69420: Gelieve geen Edge gebruiken........</h1> : 
             <BrowserRouter>
                 <Header
                     page={page}

@@ -11,7 +11,7 @@ const Headset = ({ headsets, setPage }: any) => {
 	const headset = headsets.get(headsetName);
 
 	return (
-		<>
+		<main>
 			<h1 className="title">{headset.naam}</h1>
 			<div className="headset-info-container">
 				<div className="headset-info-container__secondary">
@@ -39,7 +39,7 @@ const Headset = ({ headsets, setPage }: any) => {
 				</div>
 				<Recensies />
 			</div>
-		</>
+		</main>
 	);
 }
 

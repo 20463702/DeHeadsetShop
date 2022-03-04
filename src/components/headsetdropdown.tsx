@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 const Headsetdropdown = ({ headsets, shown, setPage }: any) => {
     const getImages = () => {
