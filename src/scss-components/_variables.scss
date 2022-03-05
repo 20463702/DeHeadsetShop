@@ -17,12 +17,6 @@ $gradients: (
     @return map-get($gradients, $name);
 }
 
-@mixin genericFlexBox {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-
 @mixin flexBox($d/*irection*/: row, $j/*ustification*/: space-around, $a/*lignment*/: unset) {
     display: flex;
     flex-wrap: wrap;
