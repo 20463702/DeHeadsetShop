@@ -1,0 +1,50 @@
+{
+    "htcvive": {
+        "naam": "HTCVive",
+        "beeldscherm": "OLED",
+        "xResolutie": 1080,
+        "yResolutie": 1200,
+        "refreshRate": 90,
+        "PPD": 9.81,
+        "FOV": 110,
+        "gewicht": 468,
+        "prijs": 400,
+        "uitgeefDatum": "05-04-2016"
+    },
+    "oculusrift": {
+        "naam": "OculusRift",
+        "beeldscherm": "OLED",
+        "xResolutie": 1080,
+        "yResolutie": 1200,
+        "refreshRate": 90,
+        "PPD": 9.87,
+        "FOV": 94,
+        "gewicht": 470,
+        "prijs": 350,
+        "uitgeefDatum": "28-03-2016"
+    },
+    "razorosvr": {
+        "naam": "RazorOSVR",
+        "beeldscherm": "OLED",
+        "xResolutie": 1080,
+        "yResolutie": 1200,
+        "refreshRate": 90,
+        "PPD": 9.81,
+        "FOV": 110,
+        "gewicht": 650,
+        "prijs": 400,
+        "uitgeefDatum": "20-07-2016"
+    },
+    "valveindex": {
+        "naam": "ValveIndex",
+        "beeldscherm": "LCD",
+        "xResolutie": 1440,
+        "yResolutie": 1600,
+        "refreshRate": 144,
+        "PPD": 11.07,
+        "FOV": 130,
+        "gewicht": 809,
+        "prijs": 1000,
+        "uitgeefDatum": "01-05-2019"
+    }
+}

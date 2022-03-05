@@ -10,68 +10,8 @@ import HeadsetDropDown from './components/headsetdropdown';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Footer from './components/footer';
 import Bestelling from './components/bestelling';
-import { browserName } from "react-device-detect";
-
-const getHeadsets = (): Map<string, object> => {
-    return new Map<string, object>([
-        ["htcvive", {
-            naam: "HTCVive",
-            beeldscherm: "OLED",
-            xResolutie: 1080,
-            yResolutie: 1200,
-            refreshRate: 90,
-            PPD: 9.81,
-            FOV: 110,
-            gewicht: 468,
-            prijs: 400,
-            uitgeefDatum: "05-04-2016",
-            img: require("./img/headsets/HTCVive.png"),
-            vid: require("./vids/HTCVive.mp4"),
-        }],
-        ["oculusrift", {
-            naam: "OculusRift",
-            beeldscherm: "OLED",
-            xResolutie: 1080,
-            yResolutie: 1200,
-            refreshRate: 90,
-            PPD: 9.87,
-            FOV: 94,
-            gewicht: 470,
-            prijs: 350,
-            uitgeefDatum: "28-03-2016",
-            img: require("./img/headsets/OculusRift.png"),
-            vid: require("./vids/OculusRift.mp4"),
-        }],
-        ["razorosvr", {
-            naam: "RazorOSVR",
-            beeldscherm: "OLED",
-            xResolutie: 1080,
-            yResolutie: 1200,
-            refreshRate: 90,
-            PPD: 9.81,
-            FOV: 110,
-            gewicht: 650,
-            prijs: 400,
-            uitgeefDatum: "20-07-2016",
-            img: require("./img/headsets/RazorOSVR.png"),
-            vid: require("./vids/RazorOSVR.mp4"),
-        }],
-        ["valveindex", {
-            naam: "ValveIndex",
-            beeldscherm: "LCD",
-            xResolutie: 1440,
-            yResolutie: 1600,
-            refreshRate: 144,
-            PPD: 11.07,
-            FOV: 130,
-            gewicht: 809,
-            prijs: 1000,
-            uitgeefDatum: "01-05-2019",
-            img: require("./img/headsets/ValveIndex.png"),
-            vid: require("./vids/ValveIndex.mp4"),
-        }],
-    ]);
-}
+import { browserName } from 'react-device-detect';
+import headsetsJSON from  "./json/headsets.json";
 
 const App = (): JSX.Element => {
     // Functioneert als een updated: zie header.tsx voor meer informatie hierover.
@@ -82,6 +22,28 @@ const App = (): JSX.Element => {
 	const [showBronnen, setShowBronnen] = useState<boolean>(false);
     // Volgorde van informatie: true is standaard (<).
 	const [order, setOrder] = useState<boolean>(true);
+    const headsets = new Map<string, object>([
+        ["htcvive", {
+            ...headsetsJSON.htcvive,
+            img: require("./img/headsets/HTCVive.png"),
+            vid: require("./vids/HTCVive.mp4"),
+        }],
+        ["oculusrift", {
+            ...headsetsJSON.oculusrift,
+            img: require("./img/headsets/OculusRift.png"),
+            vid: require("./vids/OculusRift.mp4"),
+        }],
+        ["razorosvr", {
+            ...headsetsJSON.razorosvr,
+            img: require("./img/headsets/RazorOSVR.png"),
+            vid: require("./vids/RazorOSVR.mp4"),
+        }],
+        ["valveindex", {
+            ...headsetsJSON.valveindex,
+            img: require("./img/headsets/ValveIndex.png"),
+            vid: require("./vids/ValveIndex.mp4"),
+        }],
+    ]);
 
     const toggleHeadsetsMenu = () => {
         setShowHeadsetDropDown(!showHeadsetDropDown);
@@ -117,7 +79,7 @@ const App = (): JSX.Element => {
                     showHeadsetsMenu={showHeadsetDropDown}
                 />
                 <HeadsetDropDown
-                    headsets={getHeadsets()}
+                    headsets={headsets}
                     setPage={setPage}
                     shown={showHeadsetDropDown}
                 />
@@ -138,17 +100,17 @@ const App = (): JSX.Element => {
                     <Route
                         path="/headset"
                         element={<Headset
-                            headsets={getHeadsets()}
+                            headsets={headsets}
                             setPage={setPage}
                             />}
                     />
                     <Route
                         path="/vergelijking"
-                        element={<Vergelijking headsets={getHeadsets()}/>}
+                        element={<Vergelijking headsets={headsets}/>}
                     />
                     <Route
                         path="/bestelling"
-                        element={<Bestelling headsets={getHeadsets()}/>}
+                        element={<Bestelling headsets={headsets}/>}
                     />
                 </Routes>
 
