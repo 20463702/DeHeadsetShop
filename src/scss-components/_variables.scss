@@ -23,6 +23,14 @@ $gradients: (
     justify-content: space-around;
 }
 
+@mixin flexBox($d/*irection*/: row, $j/*ustification*/: space-around, $a/*lignment*/: unset) {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: $d;
+    justify-content: $j;
+    align-items: $a;
+}
+
 @mixin standardImage {
     margin-bottom: 0.2em;
     border: 2px solid color(accent);

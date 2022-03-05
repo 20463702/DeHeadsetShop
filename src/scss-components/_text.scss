@@ -1,10 +1,5 @@
 #information-container {
-    @media (max-width: $mobile) {
-    }
-
-    @include genericFlexBox;
-    align-items: center;
-    flex-direction: column; 
+    @include flexBox($d: column, $a: center);
     margin-left: 5%;
 }
 

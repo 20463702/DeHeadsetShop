@@ -10,8 +10,7 @@
 }
 
 footer {
-    @include genericFlexBox;
-    flex-direction: column;
+    @include flexBox($d: column);
     padding: 1em;
     background-image: gradient(bl-tr);
 

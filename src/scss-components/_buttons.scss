@@ -1,7 +1,5 @@
 button {
     @include standardBorder;
-    @media (max-width: $mobile) {
-    }
 
     cursor: pointer;
     margin: 1em;

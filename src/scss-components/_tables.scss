@@ -50,7 +50,5 @@ table {
 }
 
 .table-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include flexBox($j: center, $a: center);
 }

@@ -94,7 +94,7 @@ const Informatie = ({ info, order, setOrder }: any) => {
 		<main>
 		 	<div id="anchor-display">
 				<h3>Secties</h3>
-				<div className="anchor-container">
+				<div id="anchor-container">
 					{displayAnchors()}
 				</div>
 			 </div>

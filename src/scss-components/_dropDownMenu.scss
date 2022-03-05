@@ -1,5 +1,5 @@
 #dropdown-container {
-    @include genericFlexBox;
+    @include flexBox();
 
     img {
         @media (max-width: $mobile) {
