@@ -76,9 +76,9 @@ const getHeadsets = (): Map<string, object> => {
 const App = () => {
     // Functioneert als een updated: zie header.tsx voor meer informatie hierover.
     const [page, setPage]: any = useState<string|null>("index");
-    // State over of de headset drop down menu wel of niet gelaten zien moet worden.
+    // State over of de headset drop down menu wel of niet zichtbaar moet zijn.
     const [showHeadsetDropDown, setShowHeadsetDropDown] = useState<boolean>(false);
-    // State over of de bronnen gelaten zien moeten worden.
+    // State over of de bronnen zichtbaar moeten worden.
 	const [showBronnen, setShowBronnen] = useState<boolean>(false);
     // Volgorde van informatie: true is standaard (<).
 	const [order, setOrder] = useState<boolean>(true);
@@ -169,7 +169,7 @@ const App = () => {
                     setShowBronnen={setShowBronnen}
                 /> : ""}
 
-                {page === "vergelijking" ?
+                {page === "vergelijking" || page === "index" ?
                 <div className="pinned-bottom"><Footer/></div> : 
                 <Footer/>}
 

@@ -78,7 +78,7 @@ const Vergelijking = ({ headsets }: any) => {
 			{!displayTable ? "" :
 			(<div className="table-container">
 				<table>
-					<tbody>
+					<thead>
 						<tr>
 							<th className="img-container"></th>
 							<th>Naam:</th>
@@ -91,6 +91,8 @@ const Vergelijking = ({ headsets }: any) => {
 							<th>Prijs:</th>
 							<th>Datum v. Uitgave:</th>
 						</tr>
+					</thead>
+					<tbody>
 						{updateColumns()}
 					</tbody>
 				</table>

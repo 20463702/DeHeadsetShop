@@ -1,8 +1,9 @@
 * {
-    overflow-x: hidden;
-    word-wrap: break-word;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
+    word-wrap: break-word;
+    box-sizing: border-box;
 }
 
 html {
@@ -54,9 +55,11 @@ hr.red {
 }
 
 .pinned-bottom {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
+    @media (min-width: $notMobile) {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+    }
 }
 
 .central {

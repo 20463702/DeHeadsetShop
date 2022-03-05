@@ -9,8 +9,8 @@ $colors: (
 }
 
 $gradients: (
-    "tr-bl": linear-gradient(135deg, rgba(255, 20, 20, 1), rgba(255, 80, 80, 1)),
-    "bl-tr": linear-gradient(-45deg, rgba(255, 20, 20, 1), rgba(255, 80, 80, 1)),
+    "tr-bl": linear-gradient(165deg, rgba(255, 20, 20, 1), rgba(255, 80, 80, 1)),
+    "bl-tr": linear-gradient(-15deg, rgba(255, 20, 20, 1), rgba(255, 80, 80, 1)),
 );
 
 @function gradient($name) {
