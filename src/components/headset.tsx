@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import Recensies from './recensies';
 
-const Headset = ({ headsets, setPage }: any) => {
+const Headset = ({ headsets, setPage }: any): JSX.Element => {
 	useEffect(() => {
 		setPage(null);
 	}, []);
@@ -43,4 +43,4 @@ const Headset = ({ headsets, setPage }: any) => {
 	);
 }
 
-export default Headset
+export default Headset;

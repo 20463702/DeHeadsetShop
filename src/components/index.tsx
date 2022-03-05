@@ -1,13 +1,14 @@
-import React from 'react'
+import React from 'react';
 
-const Index = () => {
+const Index = (): JSX.Element => {
+
 	return (
 		//! PLACEHOLDER
 		<main>
 			<h1>index</h1>
 		</main>
 		//!
-	)
+	);
 }
 
-export default Index
+export default Index;

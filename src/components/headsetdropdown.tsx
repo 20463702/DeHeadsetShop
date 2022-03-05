@@ -1,7 +1,7 @@
 import React from 'react';
 
-const Headsetdropdown = ({ headsets, shown, setPage }: any) => {
-    const getImages = () => {
+const Headsetdropdown = ({ headsets, shown, setPage }: any): JSX.Element => {
+    const getImages = (): JSX.Element[] => {
         let imgs = new Array<JSX.Element>();
         headsets.forEach((h: any) => {
             imgs.push(
@@ -33,4 +33,4 @@ const Headsetdropdown = ({ headsets, shown, setPage }: any) => {
     }
 }
 
-export default Headsetdropdown
+export default Headsetdropdown;

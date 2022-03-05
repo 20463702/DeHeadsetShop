@@ -1,9 +1,10 @@
-import React from 'react'
+import React from 'react';
 import PropTypeos from 'prop-types';
-import geschiedenis from '../json/geschiedenis.json';
-import applicaties from '../json/applicaties.json';
 
-const Informatie = ({ info, order, setOrder }: any) => {
+const Informatie = ({ /*info, */order, setOrder }: any): JSX.Element => {
+	const informationName = new URLSearchParams(window.location.search).get("p");
+	const rawInfo = require(`../json/${informationName}.json`);
+
 	const images = new Map<string, string>([
 		["360degreePainting", require("../img/geschiedenis/360deg_painting.png")],
 		["sensorama", require("../img/geschiedenis/sensorama.png")],
@@ -21,20 +22,6 @@ const Informatie = ({ info, order, setOrder }: any) => {
 		["onderwijs", require("../img/applicaties/vr-in-education.png")],
 		["vastgoed", require("../img/applicaties/vastgoed.png")],
 	]);
-
-	// Vat alle informatie en pleurt het in (const) rawInfo
-	const getInfo = (): object[] => {
-		let information = new Array<object>();
-		if (info === "geschiedenis") {
-			information = geschiedenis;
-		} else if (info === "applicaties") {
-			information = applicaties;
-		} else {
-			console.error("Invalid request");
-		}
-		return information
-	}
-	const rawInfo = getInfo();
 
 	// Flipt de volgorde.
 	const changeOrder = (): void => {
@@ -109,7 +96,7 @@ const Informatie = ({ info, order, setOrder }: any) => {
 }
 
 Informatie.propTypes = {
-	info: PropTypeos.string.isRequired,
+	// info: PropTypeos.string.isRequired,
 	order: PropTypeos.any.isRequired,
 	setOrder: PropTypeos.func.isRequired,
 }

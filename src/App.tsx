@@ -73,7 +73,7 @@ const getHeadsets = (): Map<string, object> => {
     ]);
 }
 
-const App = () => {
+const App = (): JSX.Element => {
     // Functioneert als een updated: zie header.tsx voor meer informatie hierover.
     const [page, setPage]: any = useState<string|null>("index");
     // State over of de headset drop down menu wel of niet zichtbaar moet zijn.
@@ -82,7 +82,6 @@ const App = () => {
 	const [showBronnen, setShowBronnen] = useState<boolean>(false);
     // Volgorde van informatie: true is standaard (<).
 	const [order, setOrder] = useState<boolean>(true);
-    // Informatie over de headsets (geen JSON [deels] zodat het leven met de plaatjes een stuk makkelijker is).
 
     const toggleHeadsetsMenu = () => {
         setShowHeadsetDropDown(!showHeadsetDropDown);
@@ -129,33 +128,23 @@ const App = () => {
                         element={<Index/>}
                     />
                     <Route
-                        path="/geschiedenis"
+                        path="/informatie"
                         element=
                             {<Informatie
                                 order={order}
                                 setOrder={setOrder}
-                                info="geschiedenis"
                             />}
-                    />
-                    <Route
-                        path="/applicaties"
-                        element=
-                            {<Informatie
-                                order={order}
-                                setOrder={setOrder}
-                                info="applicaties"
-                            />}
-                    />
-                    <Route
-                        path="/vergelijking"
-                        element={<Vergelijking headsets={getHeadsets()}/>}
                     />
                     <Route
                         path="/headset"
                         element={<Headset
                             headsets={getHeadsets()}
                             setPage={setPage}
-                        />}
+                            />}
+                    />
+                    <Route
+                        path="/vergelijking"
+                        element={<Vergelijking headsets={getHeadsets()}/>}
                     />
                     <Route
                         path="/bestelling"
@@ -169,7 +158,7 @@ const App = () => {
                     setShowBronnen={setShowBronnen}
                 /> : ""}
 
-                {page === "vergelijking" || page === "index" ?
+                {page === "vergelijking" ?
                 <div className="pinned-bottom"><Footer/></div> : 
                 <Footer/>}
 

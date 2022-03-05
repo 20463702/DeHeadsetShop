@@ -2,12 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import bronnenJSON from '../json/bronnen.json';
 
-const Bronnen = ({ showBronnen, setShowBronnen }: any) => {
+const Bronnen = ({ showBronnen, setShowBronnen }: any): JSX.Element => {
 	const toggleBronnen = () => {setShowBronnen(!showBronnen)}
 
 	// Convert alle bronnen tot JSX elementen en voegt die toe aan de bronnen array (return).
-	const getBronnen = () => {
-		let bronnen: JSX.Element[] = new Array<JSX.Element>();
+	const getBronnen = (): JSX.Element[] => {
+		let bronnen = new Array<JSX.Element>();
 		bronnenJSON.forEach((b: any) => {
 			bronnen.push(
 				<p key={`${b.auteur} -- ${b.titel}`} className="bron">
@@ -46,4 +46,4 @@ Bronnen.propTypes = {
 	setShowBronnen: PropTypes.func.isRequired,
 }
 
-export default Bronnen
+export default Bronnen;

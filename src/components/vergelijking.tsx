@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 
-const Vergelijking = ({ headsets }: any) => {
+const Vergelijking = ({ headsets }: any): JSX.Element => {
 	const [displayedHeadsets, setDisplayedHeadsets] = useState<string[]>([]);
 	const [displayTable, setDisplayTable] = useState<boolean>(false);
 
@@ -102,4 +102,4 @@ const Vergelijking = ({ headsets }: any) => {
 	);
 }
 
-export default Vergelijking
+export default Vergelijking;

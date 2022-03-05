@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import recensieText from '../json/recensies.json';
 
-const Recensies = () => {
+const Recensies = (): JSX.Element => {
 	// Vat random users en text van verschillende API's.
 	const [userData, setUserData] = useState<Array<any>>();
 	useEffect(() => {
@@ -35,4 +35,4 @@ const Recensies = () => {
 	);
 }
 
-export default Recensies
+export default Recensies;
