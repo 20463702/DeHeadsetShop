@@ -16,7 +16,7 @@ body {
 }
 
 .horizontal-flex-container {
-    @include genericFlexBox;
+    @include flexBox();
 }
 
 #change-volgorde {
