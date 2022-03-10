@@ -25,7 +25,7 @@ $gradients: (
     align-items: $a;
 }
 
-@mixin standardImage {
+@mixin stdImage {
     margin-bottom: 0.2em;
     border: 2px solid color(accent);
     border-radius: 0.5em;
@@ -34,7 +34,7 @@ $gradients: (
     width: 12em;
 }
 
-@mixin standardBorder {
+@mixin stdBorder {
     border: 2px solid color(accent);
     border-radius: 1em;
 }

@@ -1,5 +1,5 @@
 button {
-    @include standardBorder;
+    @include stdBorder;
 
     cursor: pointer;
     margin: 1em;
@@ -7,12 +7,24 @@ button {
     width: 13em;
     color: color(accent);
     background-color: color(secondary);
-
+    
     &:hover {
         transform: scale(1.05);
         transition: transform 0.25s;
         color: color(secondary);
         background-color: color(accent);
+    }
+
+    .red {
+        backgorund: pink;
+        border-color: color(primary);
+        background-color: color(secondary);
+        color: color(accent);
+    
+        &:hover {
+            background-color: color(primary);
+            color: color(secondary);
+        }
     }
 }
 
@@ -24,16 +36,5 @@ button {
     &:hover {
         color: color(accent);
         background-color: color(secondary);
-    }
-}
-
-button.red {
-    border-color: color(primary);
-    background-color: color(secondary);
-    color: color(accent);
-
-    &:hover {
-        background-color: color(primary);
-        color: color(secondary);
     }
 }

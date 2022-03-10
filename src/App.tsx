@@ -22,6 +22,7 @@ const App = (): JSX.Element => {
 	const [showBronnen, setShowBronnen] = useState<boolean>(false);
     // Volgorde van informatie: true is standaard (<).
 	const [order, setOrder] = useState<boolean>(true);
+    // Informatie over de headsets van JSON naar een map.
     const headsets = new Map<string, object>([
         ["htcvive", {
             ...headsetsJSON.htcvive,
@@ -45,27 +46,17 @@ const App = (): JSX.Element => {
         }],
     ]);
 
-    const toggleHeadsetsMenu = () => {
-        setShowHeadsetDropDown(!showHeadsetDropDown);
-    }
-
     // Zet de pagina state naar de pagina die correspondeerd met de geklikte knop.
     const setCurrentPage = (page: string) => {
         setPage(page);
         setShowHeadsetDropDown(false);
         setShowBronnen(false);
         setOrder(false);
-        document.title =
-            page === null ? "DeHeadsetShop" :
-            `${page} - DeHeadsetShop`;
+        document.title = page === null ? "DeHeadsetShop" : `${page} - DeHeadsetShop`;
     }
-    //
-
 
     useEffect(() => {
         console.log("213.10.151.91");
-        if (browserName === "Edge")
-            console.error("GEEN EDGE GEBRUIKEN!!!");
     }, []);
 
     return (
@@ -75,12 +66,11 @@ const App = (): JSX.Element => {
                 <Header
                     page={page}
                     setPage={setCurrentPage}
-                    toggleHeadsetsMenu={toggleHeadsetsMenu}
+                    toggleHeadsetsMenu={() => {setShowHeadsetDropDown(!showHeadsetDropDown)}}
                     showHeadsetsMenu={showHeadsetDropDown}
                 />
                 <HeadsetDropDown
                     headsets={headsets}
-                    setPage={setPage}
                     shown={showHeadsetDropDown}
                 />
 
@@ -95,13 +85,16 @@ const App = (): JSX.Element => {
                             {<Informatie
                                 order={order}
                                 setOrder={setOrder}
+                                setPage={setCurrentPage}
+                                showBronnen={showBronnen}
+                                setShowBronnen={setShowBronnen}
                             />}
                     />
                     <Route
                         path="/headset"
                         element={<Headset
-                            headsets={headsets}
-                            setPage={setPage}
+                                headsets={headsets}
+                                setPage={setCurrentPage}
                             />}
                     />
                     <Route
@@ -110,19 +103,12 @@ const App = (): JSX.Element => {
                     />
                     <Route
                         path="/bestelling"
-                        element={<Bestelling headsets={headsets}/>}
+                        element={<Bestelling
+                                headsets={headsets}
+                                setPage={setCurrentPage}
+                            />}
                     />
                 </Routes>
-
-                {page === "geschiedenis" || page === "applicaties" ?
-                <Bronnen
-                    showBronnen={showBronnen}
-                    setShowBronnen={setShowBronnen}
-                /> : ""}
-
-                {page === "vergelijking" ?
-                <div className="pinned-bottom"><Footer/></div> : 
-                <Footer/>}
 
             </BrowserRouter>}
         </>

@@ -1,0 +1,31 @@
+form {
+    @media (max-width: $mobile) {
+        margin-left: 5em;
+    }
+
+    margin-left: 8em;
+    
+    div {
+        margin: 1em;
+    }
+    
+    input {
+        margin: 0.4em;
+        
+        &:invalid {
+            border: 2px solid red;
+        }
+        
+        &[type = submit] {
+            @extend button;
+        }
+    }
+}
+
+div.formMessage {
+    @media (max-width: $mobile) {
+        margin-left: 3em;
+    }
+    
+    margin-left: 5em;
+}

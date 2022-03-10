@@ -37,6 +37,8 @@ hr.red {
     color: color(primary);
 }
 
+
+
 #vergelijking-imgs {
     margin-top: 2em;
     margin-bottom: 3em;
@@ -45,21 +47,19 @@ hr.red {
 
     img {
         @media (max-width: $mobile) {
-            width: 5em;
+            width: 6em;
             height: 2em;
         }
 
-        @include standardImage;
+        @include stdImage;
         cursor: pointer;
     }
 }
 
 .pinned-bottom {
-    @media (min-width: $notMobile) {
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-    }
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
 
 .central {

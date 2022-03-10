@@ -30,7 +30,7 @@
     }
 
     video {
-        @include standardBorder;
+        @include stdBorder;
         @media (max-width: $mobile) {
             width: 22em;
         }

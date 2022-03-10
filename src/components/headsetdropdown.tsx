@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Headsetdropdown = ({ headsets, shown, setPage }: any): JSX.Element => {
+const Headsetdropdown = ({ headsets, shown }: any): JSX.Element => {
     const getImages = (): JSX.Element[] => {
         let imgs = new Array<JSX.Element>();
         headsets.forEach((h: any) => {

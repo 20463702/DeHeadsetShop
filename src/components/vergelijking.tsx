@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Footer from './footer';
 
 const Vergelijking = ({ headsets }: any): JSX.Element => {
 	const [displayedHeadsets, setDisplayedHeadsets] = useState<string[]>([]);
@@ -70,35 +71,41 @@ const Vergelijking = ({ headsets }: any): JSX.Element => {
 	//
 
 	return (
-		<main>
-			<div id="vergelijking-imgs">
-				{getVergelijkingImgs()}
-			</div>
+		<>
+			<main>
+				<div id="vergelijking-imgs">
+					{getVergelijkingImgs()}
+				</div>
 
-			{!displayTable ? "" :
-			(<div className="table-container">
-				<table>
-					<thead>
-						<tr>
-							<th className="img-container"></th>
-							<th>Naam:</th>
-							<th>Beeldscherm:</th>
-							<th>Resolutie:</th>
-							<th>Refresh Rate:</th>
-							<th>PPD:</th>
-							<th>FOV:</th>
-							<th>Gewicht:</th>
-							<th>Prijs:</th>
-							<th>Datum v. Uitgave:</th>
-						</tr>
-					</thead>
-					<tbody>
-						{updateColumns()}
-					</tbody>
-				</table>
+				{!displayTable ? "" :
+				(<div className="table-container">
+					<table>
+						<thead>
+							<tr>
+								<th className="img-container"></th>
+								<th>Naam:</th>
+								<th>Beeldscherm:</th>
+								<th>Resolutie:</th>
+								<th>Refresh Rate:</th>
+								<th>PPD:</th>
+								<th>FOV:</th>
+								<th>Gewicht:</th>
+								<th>Prijs:</th>
+								<th>Datum v. Uitgave:</th>
+							</tr>
+						</thead>
+						<tbody>
+							{updateColumns()}
+						</tbody>
+					</table>
+				</div>
+				)}
+			</main>
+
+			<div className="pinned-bottom">
+				<Footer/>
 			</div>
-			)}
-		</main>
+		</>
 	);
 }
 
