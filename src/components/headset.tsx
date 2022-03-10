@@ -1,14 +1,10 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import Footer from './footer';
 import Recensies from './recensies';
 
-const Headset = ({ params, headsets, setPage }: any): JSX.Element => {
-	useEffect(() => {
-		setPage(null);
-	}, []);
-
-	// Vat de correcte headset uit gebaseerd op de headsetName variabel in de URL.
+const Headset = ({ headsets, setPage }: any): JSX.Element => {
 	const headsetName = new URLSearchParams(window.location.search).get("n");
 	const headset = headsets.get(headsetName);
 
@@ -40,7 +36,7 @@ const Headset = ({ params, headsets, setPage }: any): JSX.Element => {
 									<li>PPD: {headset.PPD}</li>
 									<li>FOV: {headset.FOV}</li>
 									<li>Gewicht: {headset.gewicht}</li>
-									<li>Prijs: {headset.prijs}</li>
+									<li>Prijs: €{headset.prijs}</li>
 									<li>Datum v. Uitgave: {headset.uitgeefDatum}</li>
 								</ul>
 							</div>
@@ -53,6 +49,11 @@ const Headset = ({ params, headsets, setPage }: any): JSX.Element => {
 			<Footer/>
 		</>
 	);
+}
+
+Headset.propTypes = {
+	headsets: PropTypes.any.isRequired,
+	setPage: PropTypes.func.isRequired,
 }
 
 export default Headset;

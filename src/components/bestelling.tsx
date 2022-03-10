@@ -1,11 +1,8 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import Footer from './footer';
+import PropTypes from 'prop-types';
 
-const Bestelling = ({ headsets, setPage }: any): JSX.Element => {
-	useEffect(() => {
-		setPage(null);
-	}, []);
-
+const Bestelling = ({ headsets }: any): JSX.Element => {
 	const headsetName = new URLSearchParams(window.location.search).get("n");
 	const headset = headsets.get(headsetName);
 
@@ -79,6 +76,10 @@ const Bestelling = ({ headsets, setPage }: any): JSX.Element => {
 			<Footer/>
 		</>
 	);
+}
+
+Bestelling.propTypes = {
+	headsets: PropTypes.any.isRequired,
 }
 
 export default Bestelling;

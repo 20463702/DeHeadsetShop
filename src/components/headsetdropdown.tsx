@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 const Headsetdropdown = ({ headsets, shown, setPage }: any): JSX.Element => {
     const getImages = (): JSX.Element[] => {
@@ -33,6 +34,12 @@ const Headsetdropdown = ({ headsets, shown, setPage }: any): JSX.Element => {
     else {
         return <></>;
     }
+}
+
+Headsetdropdown.propTypes = {
+    headsets: PropTypes.any.isRequired,
+    shown: PropTypes.bool.isRequired,
+    setPage: PropTypes.func.isRequired,
 }
 
 export default Headsetdropdown;

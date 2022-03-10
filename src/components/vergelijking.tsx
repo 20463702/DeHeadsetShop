@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Footer from './footer';
+import PropTypes from 'prop-types';
 
 const Vergelijking = ({ headsets }: any): JSX.Element => {
 	const [displayedHeadsets, setDisplayedHeadsets] = useState<string[]>([]);
@@ -107,6 +108,10 @@ const Vergelijking = ({ headsets }: any): JSX.Element => {
 			</div>
 		</>
 	);
+}
+
+Vergelijking.propTypes = {
+	headsets: PropTypes.any.isRequired,
 }
 
 export default Vergelijking;

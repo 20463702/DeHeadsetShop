@@ -84,7 +84,6 @@ const App = (): JSX.Element => {
                             {<Informatie
                                 order={order}
                                 setOrder={setOrder}
-                                setPage={setCurrentPage}
                                 showBronnen={showBronnen}
                                 setShowBronnen={setShowBronnen}
                             />}
@@ -102,10 +101,7 @@ const App = (): JSX.Element => {
                     />
                     <Route
                         path="/bestelling"
-                        element={<Bestelling
-                                headsets={headsets}
-                                setPage={setCurrentPage}
-                            />}
+                        element={<Bestelling headsets={headsets}/>}
                     />
                 </Routes>
 

@@ -1,9 +1,9 @@
-import React, { useEffect } from 'react';
-import PropTypeos from 'prop-types';
+import React from 'react';
+import PropTypes from 'prop-types';
 import Footer from './footer';
 import Bronnen from './bronnen';
 
-const Informatie = ({ order, setOrder, setPage, showBronnen, setShowBronnen }: any): JSX.Element => {
+const Informatie = ({ order, setOrder, showBronnen, setShowBronnen }: any): JSX.Element => {
 	const informationName = new URLSearchParams(window.location.search).get("n");
 	const rawInfo = require(`../json/${informationName}.json`);
 	
@@ -107,11 +107,10 @@ const Informatie = ({ order, setOrder, setPage, showBronnen, setShowBronnen }: a
 }
 
 Informatie.propTypes = {
-	order: PropTypeos.any.isRequired,
-	setOrder: PropTypeos.func.isRequired,
-	setPage: PropTypeos.func.isRequired,
-	showBronnen: PropTypeos.bool.isRequired,
-	setShowBronnen: PropTypeos.func.isRequired,
+	order: PropTypes.any.isRequired,
+	setOrder: PropTypes.func.isRequired,
+	showBronnen: PropTypes.bool.isRequired,
+	setShowBronnen: PropTypes.func.isRequired,
 }
 
 export default Informatie
