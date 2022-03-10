@@ -1,14 +1,15 @@
 import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import Footer from './footer';
 import Recensies from './recensies';
 
-const Headset = ({ headsets, setPage }: any): JSX.Element => {
+const Headset = ({ params, headsets, setPage }: any): JSX.Element => {
 	useEffect(() => {
 		setPage(null);
 	}, []);
 
 	// Vat de correcte headset uit gebaseerd op de headsetName variabel in de URL.
-	const headsetName = new URLSearchParams(window.location.search).get("headsetName");
+	const headsetName = new URLSearchParams(window.location.search).get("n");
 	const headset = headsets.get(headsetName);
 
 	return (
@@ -23,7 +24,13 @@ const Headset = ({ headsets, setPage }: any): JSX.Element => {
 							</video>
 						</div>
 						<div>
-							<a href={`bestelling?headsetName=${headset.naam.toLowerCase()}`}><button className="red">Bestellen</button></a>
+							<Link to={`/bestelling?n=${headset.naam.toLowerCase()}`}>
+								<button
+									className="red"
+									onClick={(() => {setPage(null)})}>
+									Bestellen
+								</button>
+							</Link>
 							<div className="specifications">
 								<h2>Specificaties</h2>
 								<ul>

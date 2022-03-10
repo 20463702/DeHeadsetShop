@@ -19,7 +19,7 @@ const Header = ({ page, setPage, toggleHeadsetsMenu, showHeadsetsMenu }: any): J
 						</Link>
 					</div>
 					<div>
-						<Link to="/informatie?p=geschiedenis">
+						<Link to="/informatie?n=geschiedenis">
 							<button
 								className={page === "geschiedenis" ? "button-selected" : ""}
 								onClick={() => {setPage("geschiedenis")}}>
@@ -35,7 +35,7 @@ const Header = ({ page, setPage, toggleHeadsetsMenu, showHeadsetsMenu }: any): J
 						</button>
 					</div>
 					<div>
-						<Link to="/informatie?p=applicaties">
+						<Link to="/informatie?n=applicaties">
 							<button
 								className={page === "applicaties" ? "button-selected" : ""}
 								onClick={() => {setPage("applicaties")}}>

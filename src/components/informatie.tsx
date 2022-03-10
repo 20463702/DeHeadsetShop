@@ -4,7 +4,7 @@ import Footer from './footer';
 import Bronnen from './bronnen';
 
 const Informatie = ({ order, setOrder, setPage, showBronnen, setShowBronnen }: any): JSX.Element => {
-	const informationName = new URLSearchParams(window.location.search).get("p");
+	const informationName = new URLSearchParams(window.location.search).get("n");
 	const rawInfo = require(`../json/${informationName}.json`);
 	
 	const images = new Map<string, string>([

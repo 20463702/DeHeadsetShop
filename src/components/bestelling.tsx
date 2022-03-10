@@ -6,7 +6,7 @@ const Bestelling = ({ headsets, setPage }: any): JSX.Element => {
 		setPage(null);
 	}, []);
 
-	const headsetName = new URLSearchParams(window.location.search).get("headsetName");
+	const headsetName = new URLSearchParams(window.location.search).get("n");
 	const headset = headsets.get(headsetName);
 
 	return (

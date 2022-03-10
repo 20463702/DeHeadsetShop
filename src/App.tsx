@@ -5,10 +5,8 @@ import Header from './components/header';
 import Headset from './components/headset';
 import Informatie from './components/informatie';
 import Vergelijking from './components/vergelijking';
-import Bronnen from './components/bronnen';
 import HeadsetDropDown from './components/headsetdropdown';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Footer from './components/footer';
 import Bestelling from './components/bestelling';
 import { browserName } from 'react-device-detect';
 import headsetsJSON from  "./json/headsets.json";
@@ -72,6 +70,7 @@ const App = (): JSX.Element => {
                 <HeadsetDropDown
                     headsets={headsets}
                     shown={showHeadsetDropDown}
+                    setPage={setCurrentPage}
                 />
 
                 <Routes>
