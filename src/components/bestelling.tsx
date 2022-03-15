@@ -68,7 +68,7 @@ const Bestelling = ({ headsets }: any): JSX.Element => {
 					</div>
 
 					<div>
-						<input type="submit" value="Verzenden"/>
+						<a href="https://okke.dev/vw4"><input type="submit" value="Verzenden"/></a>
 					</div>
 				</form>
 			</main>
