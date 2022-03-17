@@ -68,7 +68,7 @@ const Bestelling = ({ headsets }: any): JSX.Element => {
 					</div>
 
 					<div>
-						<a href="https://okke.dev/vw4"><input type="submit" value="Verzenden"/></a>
+						<input type="submit" value="Verzenden" onClick={() => {window.location.href = "https://okke.dev/vw4"}}/>
 					</div>
 				</form>
 			</main>
