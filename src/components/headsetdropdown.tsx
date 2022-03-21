@@ -7,12 +7,15 @@ const Headsetdropdown = ({ headsets, shown, setPage }: any): JSX.Element => {
         let imgs = new Array<JSX.Element>();
         headsets.forEach((h: any) => {
             imgs.push(
-                <Link key={h.naam} to={`/headset?n=${h.naam.toLowerCase()}`}>
+                <Link key={`link${h.naam}`} to={`/headset/${h.naam.toLowerCase()}`}>
                     <img
                         src={h.img}
                         alt={`Plaatje van ${h.naam}`}
                         key={h.naam}
-						onClick={() => {setPage(null)}}
+						onClick={() => {
+                            setPage(null);
+                            setTimeout(() => {window.location.reload()}, 10);
+                        }}
                     />
                 </Link>
             );

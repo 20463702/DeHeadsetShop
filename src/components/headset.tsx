@@ -1,11 +1,11 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { Link, useParams } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import Recensies from './recensies';
 
 const Headset = ({ headsets, setPage }: any): JSX.Element => {
-	const headsetName = new URLSearchParams(window.location.search).get("n");
-	const headset = headsets.get(headsetName);
+	const { name } = useParams();
+	const headset = headsets.get(name);
 
 	return (
 		<main>
@@ -18,7 +18,7 @@ const Headset = ({ headsets, setPage }: any): JSX.Element => {
 						</video>
 					</div>
 					<div>
-						<Link to={`/bestelling?n=${headset.naam.toLowerCase()}`}>
+						<Link to={`/bestelling/${headset.naam.toLowerCase()}`}>
 							<button
 								className="red"
 								onClick={(() => {setPage(null)})}>

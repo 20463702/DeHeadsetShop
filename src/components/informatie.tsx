@@ -1,10 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Bronnen from './bronnen';
+import { Link, useParams } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 
 const Informatie = ({ order, setOrder, showBronnen, setShowBronnen }: any): JSX.Element => {
-	const informationName = new URLSearchParams(window.location.search).get("n");
-	const rawInfo = require(`../json/${informationName}.json`);
+	const { info } = useParams();
+	const rawInfo = require(`../json/${info}.json`);
 	
 	const images = new Map<string, string>([
 		["360degreePainting", require("../img/geschiedenis/360deg_painting.png")],
@@ -69,10 +71,10 @@ const Informatie = ({ order, setOrder, showBronnen, setShowBronnen }: any): JSX.
 		let n = 0;
 		rawInfo.forEach((i: any) => {
 			anchors.push(
-				<a key={n} href={`#${n}`}>
+				<HashLink key={n} to={`#${n}`}>
 					{i.title}
-				</a>
-			)
+				</HashLink>
+			);
 			n++;
 		});
 		return anchors;

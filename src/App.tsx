@@ -5,7 +5,7 @@ import Headset from './components/headset';
 import Informatie from './components/informatie';
 import Vergelijking from './components/vergelijking';
 import HeadsetDropDown from './components/headsetdropdown';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, HashRouter } from 'react-router-dom';
 import Bestelling from './components/bestelling';
 import headsetsJSON from './json/headsets.json';
 import IndexMain from './components/indexMain';
@@ -58,7 +58,7 @@ const App = (): JSX.Element => {
 
     return (
         <>
-            <BrowserRouter>
+            <HashRouter>
                 <Header
                     page={page}
                     setPage={setCurrentPage}
@@ -70,20 +70,18 @@ const App = (): JSX.Element => {
                     shown={showHeadsetDropDown}
                     setPage={setCurrentPage}
                 />
-
                 <Routes>
                     <Route
                         path="/"
                         element={<IndexMain />}
                     />
                     <Route
-                        path="index/overons"
-                        element={<IndexOverOns/>}
+                        path="/index/overons"
+                        element={<IndexOverOns />}
                     />
                     <Route
-                        path="informatie"
-                        element=
-                        {<Informatie
+                        path="/informatie/:info"
+                        element={<Informatie
                             order={order}
                             setOrder={setOrder}
                             showBronnen={showBronnen}
@@ -91,23 +89,23 @@ const App = (): JSX.Element => {
                         />}
                     />
                     <Route
-                        path="headset"
+                        path="/headset/:name"
                         element={<Headset
                             headsets={headsets}
                             setPage={setCurrentPage}
                         />}
                     />
                     <Route
-                        path="vergelijking"
+                        path="/vergelijking"
                         element={<Vergelijking headsets={headsets} />}
                     />
                     <Route
-                        path="bestelling"
+                        path="/bestelling/:name"
                         element={<Bestelling headsets={headsets} />}
                     />
                 </Routes>
 
-            </BrowserRouter>
+            </HashRouter>
         </>
     );
 }

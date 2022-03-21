@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { useParams } from 'react-router-dom';
 
 const Bestelling = ({ headsets }: any): JSX.Element => {
-	const headsetName = new URLSearchParams(window.location.search).get("n");
-	const headset = headsets.get(headsetName);
+	const { name } = useParams();
+	const headset = headsets.get(name);
 
 	return (
 		<main>
