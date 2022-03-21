@@ -1,0 +1,100 @@
+#index {
+    @media (max-width: $mobile) {
+        font-size: 0.6em;
+    }
+
+    #{&}__informatie {
+        p {
+            @media (max-width: $mobile) {
+                margin: 2em;
+            }
+
+            margin: 5em;
+            text-align: justify;
+            font-size: 1.5em;
+        }
+    }
+
+    #{&}__title {
+        text-align: center;
+        font-style: italic;
+        margin: 1em;
+        margin-top: 1.5em;
+
+        h1 {
+            @media (max-width: $mobile) {
+                font-size: 5em;
+                font-weight: 600;
+            }
+
+            font-size: 8em;
+            font-weight: 700;
+        }
+
+        p {
+            text-align: center;
+            font-size: 2em;
+        }
+    }
+
+    #overons__p {
+        margin: 1em;
+        text-align: center;
+        font-size: 1.5em;
+    }
+
+    #founders-box {
+        @include flexBox();
+        text-align: center;
+
+        .founders-box__email {
+            font-size: 2em;
+        }
+
+        div {
+            @include flexBox($d: column, $a: center);
+        }
+
+        h2 {
+            @media (max-width: $mobile) {
+                font-size: 3em;
+                margin-top: 1em;
+            }
+
+            text-align: center;
+        }
+
+        img {
+            @include stdImage;
+            height: 30em;
+            width: 14.5125em;
+        }
+
+        video {
+            @include stdVideo;
+
+            @media (max-width: $mobile) {
+                height: 20em !important;
+                width: 36.36em !important;
+            }
+
+            margin: 0 !important;
+            height: 30em !important;
+            width: 54.54em !important;
+        }
+    }
+
+    #{&}__btnContainer {
+        @include flexBox();
+
+        button {
+            @media (max-width: $mobile) {
+                width: 15em;
+            }
+
+            width: 30em;
+            font-size: 2em;
+            padding: 0.2em;
+        }
+    }
+}

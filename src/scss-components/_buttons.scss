@@ -1,6 +1,13 @@
 button {
     @include stdBorder;
 
+    @media (max-width: $mobile) {
+        font-size: 0.7em;
+        width: 10em;
+        margin: 0.2em;
+        margin-top: 1em;
+    }
+
     cursor: pointer;
     margin: 1em;
     padding: 0.5em;
@@ -15,13 +22,13 @@ button {
         background-color: color(accent);
     }
 
-    .red {
-        backgorund: pink;
+    &.red {
         border-color: color(primary);
         background-color: color(secondary);
         color: color(accent);
     
         &:hover {
+            font-weight: 650;
             background-color: color(primary);
             color: color(secondary);
         }

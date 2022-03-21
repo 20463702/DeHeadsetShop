@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Footer from './footer';
 import Bronnen from './bronnen';
 
 const Informatie = ({ order, setOrder, showBronnen, setShowBronnen }: any): JSX.Element => {
@@ -100,8 +99,6 @@ const Informatie = ({ order, setOrder, showBronnen, setShowBronnen }: any): JSX.
 				showBronnen={showBronnen}
 				setShowBronnen={setShowBronnen}
 			/>
-
-			<Footer/>
 		</>
 	);
 }

@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import Footer from './footer';
 import PropTypes from 'prop-types';
 
 const Vergelijking = ({ headsets }: any): JSX.Element => {
@@ -84,15 +83,15 @@ const Vergelijking = ({ headsets }: any): JSX.Element => {
 						<thead>
 							<tr>
 								<th className="img-container"></th>
-								<th>Naam:</th>
-								<th>Beeldscherm:</th>
-								<th>Resolutie:</th>
-								<th>Refresh Rate:</th>
-								<th>PPD:</th>
-								<th>FOV:</th>
-								<th>Gewicht:</th>
-								<th>Prijs:</th>
-								<th>Datum v. Uitgave:</th>
+								<th>Naam</th>
+								<th>Beeldscherm</th>
+								<th>Resolutie</th>
+								<th>Refresh Rate</th>
+								<th>PPD</th>
+								<th>FOV</th>
+								<th>Gewicht</th>
+								<th>Prijs</th>
+								<th>Datum v. Uitgave</th>
 							</tr>
 						</thead>
 						<tbody>
@@ -102,10 +101,6 @@ const Vergelijking = ({ headsets }: any): JSX.Element => {
 				</div>
 				)}
 			</main>
-
-			<div className="pinned-bottom">
-				<Footer/>
-			</div>
 		</>
 	);
 }

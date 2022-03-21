@@ -9,16 +9,6 @@
     background-image: gradient(tr-bl);
 }
 
-footer {
-    @include flexBox($d: column);
-    padding: 1em;
-    background-image: gradient(bl-tr);
-
-    h2 {
-        margin: 0;
-    }
-}
-
 header div a {
     cursor: unset;
 }

@@ -30,22 +30,7 @@
     }
 
     video {
-        @include stdBorder;
-        @media (max-width: $mobile) {
-            width: 22em;
-        }
-
-        @media (min-width: $notMobile) {
-            @media (max-width: 1024px) {
-                width: 40em;
-                margin-right: 8em;
-            }
-
-            @media (min-width: 1025px) {
-                width: 50em;
-                margin-right: 10em;
-            }
-        }
+        @include stdVideo;
     }
 
     h2 {
